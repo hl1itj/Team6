@@ -1,5 +1,7 @@
 #include "init.h"
 #include "drunkenlogo.h"
+#include <woman.h>
+
 mm_sound_effect ambulance = { { SFX_AMBULANCE },			// id
 		(int) (1.0f * (1 << 10)),	// rate
 		0,		// handle
@@ -13,14 +15,70 @@ mm_sound_effect boom = { { SFX_BOOM },			// id
 		255,	// volume
 		255,	// panning
 		};
+//--
 
-void setPlayData() {
-	//getKey();
+#define FRAMES_PER_ANIMATION 3
 
-	//1. 현재 받아드려진 키값으로 변경되야할 좌표생성한다.
-	//2. 현재 캐릭터 상태에 따라서 변경된 좌표가 적용될시 변경되는 캐릭터상태도 채워준다.
-	//생성된 내용들을 PlayData전역변 값을 채워서 최신화시켜준다.
+
+//---------------------------------------------------------------------
+// The womman sprite
+// she needs an array of pointers to sprite memory since all
+// her frames are to be loaded.
+// she also needs to keep track of which sprite memory pointer is in use
+//---------------------------------------------------------------------
+typedef struct
+{
+	int x;
+	int y;
+
+	u16* sprite_gfx_mem[12];
+	int gfx_frame;
+
+	int state;
+	int anim_frame;
+
+
+}Woman;
+
+//---------------------------------------------------------------------
+// The state of the sprite (which way it is walking)
+//---------------------------------------------------------------------
+enum SpriteState {W_UP = 0, W_RIGHT = 1, W_DOWN = 2, W_LEFT = 3};
+
+//---------------------------------------------------------------------
+// Screen dimentions
+//---------------------------------------------------------------------
+enum {SCREEN_TOP = 0, SCREEN_BOTTOM = 160, SCREEN_LEFT = 0, SCREEN_RIGHT = 224};
+
+
+
+//---------------------------------------------------------------------
+// Animating a woman only requires us to alter which sprite memory pointer
+// she is using
+//---------------------------------------------------------------------
+void animateWoman(Woman *sprite)
+{
+	sprite->gfx_frame = sprite->anim_frame + sprite->state * FRAMES_PER_ANIMATION;
 }
+
+//---------------------------------------------------------------------
+// Initializing a woman requires us to load all of her graphics frames
+// into memory
+//---------------------------------------------------------------------
+void initWoman(Woman *sprite, u8* gfx)
+{
+	int i;
+
+	for(i = 0; i < 12; i++)
+	{
+		sprite->sprite_gfx_mem[i] = oamAllocateGfx(&oamSub, SpriteSize_32x32, SpriteColorFormat_256Color);
+		dmaCopy(gfx, sprite->sprite_gfx_mem[i], 32*32);
+		gfx += 32*32;
+	}
+}
+
+//-*-
+
 
 void Control() {
 	consoleDemoInit();
@@ -51,6 +109,27 @@ void Control() {
 
 	mm_sfxhand amb = 0;
 
+	Woman woman = {0,0};
+
+	//-----------------------------------------------------------------
+	// Initialize the graphics engines
+	//-----------------------------------------------------------------
+	videoSetMode(MODE_0_2D);
+	videoSetModeSub(MODE_0_2D);
+
+	vramSetBankA(VRAM_A_MAIN_SPRITE);
+	vramSetBankD(VRAM_D_SUB_SPRITE);
+
+	oamInit(&oamMain, SpriteMapping_1D_128, false);
+	oamInit(&oamSub, SpriteMapping_1D_128, false);
+
+	//-----------------------------------------------------------------
+	// Initialize the two sprites
+	//-----------------------------------------------------------------
+	initWoman(&woman, (u8*)womanTiles);
+
+	dmaCopy(womanPal, SPRITE_PALETTE_SUB, 512);
+
 	do {
 
 		int keys_pressed, keys_released;
@@ -67,19 +146,44 @@ void Control() {
 		switch (keys_pressed) {
 
 		case KEY_UP:
-
-
+			if(woman.y >= SCREEN_TOP) woman.y--;
+			woman.state = W_UP;
 			break;
 		case KEY_DOWN:
-
+			if(woman.y <= SCREEN_BOTTOM) woman.y++;
+						woman.state = W_DOWN;
 			break;
 		case KEY_LEFT:
-
+			if(woman.x >= SCREEN_LEFT) woman.x--;
+					woman.state = W_LEFT;
 			break;
 		case KEY_RIGHT:
-
+			if(woman.x <= SCREEN_RIGHT) woman.x++;
+					woman.state = W_RIGHT;
 			break;
 		}
+
+		woman.anim_frame++;
+		if(woman.anim_frame >= FRAMES_PER_ANIMATION) woman.anim_frame = 0;
+
+
+		animateWoman(&woman);
+
+		//-----------------------------------------------------------------
+		// Set oam attributes, notice the only difference is in the sprite
+		// graphics memory pointer argument.  The man only has one pointer
+		// while the women has an array of pointers
+		//-----------------------------------------------------------------
+
+		oamSet(&oamSub, 0, woman.x, woman.y, 0, 0, SpriteSize_32x32, SpriteColorFormat_256Color,
+			woman.sprite_gfx_mem[woman.gfx_frame], -1, false, false, false, false, false);
+
+		swiWaitForVBlank();
+
+		oamUpdate(&oamMain);
+		oamUpdate(&oamSub);
+
+
 
 		// stop ambulance sound when move button is released
 		if ((keys_released & KEY_MOVE)) {

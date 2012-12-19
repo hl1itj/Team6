@@ -18,8 +18,10 @@ TARGET		:=	$(shell basename $(CURDIR))
 BUILD		:=	build
 SOURCES		:=	gfx FreeRTOS FreeRTOS/NDS source
 INCLUDES	:=	include build FreeRTOS/include FreeRTOS/NDS
+SPRITES		:=  sprites
 GRAPHICS	:=  image
 AUDIO		:=	audio
+
 
 
 #---------------------------------------------------------------------------------
@@ -62,6 +64,7 @@ export OUTPUT	:=	$(CURDIR)/$(TARGET)
  
 export VPATH	:=	$(foreach dir,$(SOURCES),$(CURDIR)/$(dir)) \
 					$(foreach dir,$(DATA),$(CURDIR)/$(dir)) \
+					$(foreach dir,$(SPRITES),$(CURDIR)/$(dir)) \
 					$(foreach dir,$(GRAPHICS),$(CURDIR)/$(dir))
 export DEPSDIR	:=	$(CURDIR)/$(BUILD)
 
@@ -69,7 +72,9 @@ CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
 SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
 BINFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.bin)))
+SPRITE_FILES   :=  $(foreach dir, $(SPRITES),$(notdir $(wildcard $(dir)/*.png)))
 PNGFILES	:=	$(foreach dir,$(GRAPHICS),$(notdir $(wildcard $(dir)/*.png)))
+#BMPFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.bmp)))
  
 # Collect audio files supported by Maxmod (mod, xm, s3m, it, wav)
 export AUDIOFILES := $(foreach file,$(notdir $(wildcard $(AUDIO)/*.mod)),$(CURDIR)/$(AUDIO)/$(file)) \
@@ -159,10 +164,18 @@ endef
 	
 	$(bin2o)
 
+	
+#---------------------------------------------------------------------------------
+#%.s %.h : %.png
+#	grit $< -ff../sprites/sprite.grit -o$*
+#---------------------------------------------------------------------------------
+
 #---------------------------------------------------------------------------------
 %.s %.h	: %.png %.grit
 #---------------------------------------------------------------------------------
 	grit $< -fts -o$*
+	grit /home/yukult400/ndsdev/Team6/test2/sprites/woman.png -ff../sprites/sprite.grit -owoman woman.s
+	arm-eabi-gcc -MMD -MP -MF /home/yukult400/ndsdev/Team6/test2/build/woman.d -x assembler-with-cpp -g -mthumb -mthumb-interwork -c woman.s -o woman.o	
  
 -include $(DEPENDS)
  

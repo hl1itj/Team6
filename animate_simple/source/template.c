@@ -147,28 +147,24 @@ int main(void)
 			{
 
 				if(woman.y >= SCREEN_TOP) woman.y--;
-
 				woman.state = W_UP;
 			}
 			if(keys & KEY_LEFT)
 			{
 
 				if(woman.x >= SCREEN_LEFT) woman.x--;
-
 				woman.state = W_LEFT;
 			}
 			if(keys & KEY_RIGHT)
 			{
 
 				if(woman.x <= SCREEN_RIGHT) woman.x++;
-
 				woman.state = W_RIGHT;
 			}
 			if(keys & KEY_DOWN)
 			{
 
 				if(woman.y <= SCREEN_BOTTOM) woman.y++;
-
 				woman.state = W_DOWN;
 			}
 		

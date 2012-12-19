@@ -1,28 +1,28 @@
 
-//{{BLOCK(man)
+//{{BLOCK(woman)
 
 //======================================================================
 //
-//	man, 96x128@8, 
+//	woman, 96x128@8, 
 //	+ palette 256 entries, not compressed
 //	+ 192 tiles Metatiled by 4x4 not compressed
 //	Total size: 512 + 12288 = 12800
 //
-//	Time-stamp: 2012-12-20, 01:36:21
+//	Time-stamp: 2012-12-20, 01:40:49
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.9
 //	( http://www.coranac.com/projects/#grit )
 //
 //======================================================================
 
-#ifndef GRIT_MAN_H
-#define GRIT_MAN_H
+#ifndef GRIT_WOMAN_H
+#define GRIT_WOMAN_H
 
-#define manTilesLen 12288
-extern const unsigned int manTiles[3072];
+#define womanTilesLen 12288
+extern const unsigned int womanTiles[3072];
 
-#define manPalLen 512
-extern const unsigned short manPal[256];
+#define womanPalLen 512
+extern const unsigned short womanPal[256];
 
-#endif // GRIT_MAN_H
+#endif // GRIT_WOMAN_H
 
-//}}BLOCK(man)
+//}}BLOCK(woman)
