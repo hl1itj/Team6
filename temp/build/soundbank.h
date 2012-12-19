@@ -1,0 +1,16 @@
+#define SFX_DO	0
+#define SFX_DO_S	1
+#define SFX_FA	2
+#define SFX_FA_S	3
+#define SFX_HDO	4
+#define SFX_LA	5
+#define SFX_LA_S	6
+#define SFX_MI	7
+#define SFX_RE	8
+#define SFX_RE_S	9
+#define SFX_SI	10
+#define SFX_SOL	11
+#define SFX_SOL_S	12
+#define MSL_NSONGS	0
+#define MSL_NSAMPS	13
+#define MSL_BANKSIZE	13
