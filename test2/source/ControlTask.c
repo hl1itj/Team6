@@ -59,22 +59,27 @@ void Control() {
 		scanKeys();
 		keys_pressed = keysDown();
 		keys_released = keysUp();
-/*
-		if ((keys_pressed & KEY_MOVE)) {
-			amb = mmEffectEx(&ambulance);
-		}
-	*/
-		switch(keys_pressed){
+
+		 if ((keys_pressed & KEY_MOVE)) {
+		 amb = mmEffectEx(&ambulance);
+		 }
+
+		switch (keys_pressed) {
+
 		case KEY_UP:
+
+
 			break;
 		case KEY_DOWN:
-					break;
-		case KEY_LEFT:
-					break;
-		case KEY_RIGHT:
-					break;
-		}
 
+			break;
+		case KEY_LEFT:
+
+			break;
+		case KEY_RIGHT:
+
+			break;
+		}
 
 		// stop ambulance sound when move button is released
 		if ((keys_released & KEY_MOVE)) {
