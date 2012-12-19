@@ -3,12 +3,11 @@
 
 //======================================================================
 //
-//	piano_image, 256x196@16, 
-//	Alphabit on.
-//	+ bitmap lz77 compressed
-//	Total size: 12280 = 12280
+//	piano_image, 256x200@16, 
+//	+ 800 tiles not compressed
+//	Total size: 102400 = 102400
 //
-//	Time-stamp: 2012-12-19, 21:23:48
+//	Time-stamp: 2012-12-19, 21:31:40
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.10
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -17,8 +16,8 @@
 #ifndef GRIT_PIANO_IMAGE_H
 #define GRIT_PIANO_IMAGE_H
 
-#define piano_imageBitmapLen 12280
-extern const unsigned int piano_imageBitmap[3070];
+#define piano_imageTilesLen 102400
+extern const unsigned int piano_imageTiles[25600];
 
 #endif // GRIT_PIANO_IMAGE_H
 
