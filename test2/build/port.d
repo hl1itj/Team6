@@ -1,16 +1,12 @@
-ControlTask.o: /home/yukult400/ndsdev/Team6/temp/source/ControlTask.c \
- /home/yukult400/ndsdev/Team6/temp/source/init.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/FreeRTOS.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/projdefs.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/FreeRTOSConfig.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/portable.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/portmacro.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/mpu_wrappers.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/task.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/list.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/queue.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/semphr.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/queue.h \
+port.o: /home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/port.c \
+ /home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/FreeRTOS.h \
+ /home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/projdefs.h \
+ /home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/FreeRTOSConfig.h \
+ /home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/portable.h \
+ /home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/portmacro.h \
+ /home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/mpu_wrappers.h \
+ /home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/task.h \
+ /home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/list.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/libversion.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/ndstypes.h \
@@ -65,39 +61,23 @@ ControlTask.o: /home/yukult400/ndsdev/Team6/temp/source/ControlTask.c \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/system.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/trig_lut.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/video.h \
- /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/sevencore_io.h \
- /home/yukult400/ndsdev/devkitPro/libnds/include/maxmod9.h \
- /home/yukult400/ndsdev/devkitPro/libnds/include/mm_types.h \
- /home/yukult400/ndsdev/Team6/temp/build/soundbank.h \
- /home/yukult400/ndsdev/Team6/temp/build/soundbank_bin.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/card_spi.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/gdbStub.h \
- /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/gdbStubAsm.h
+ /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h
 
-/home/yukult400/ndsdev/Team6/temp/source/init.h:
+/home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/FreeRTOS.h:
 
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/FreeRTOS.h:
+/home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/projdefs.h:
 
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/projdefs.h:
+/home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/FreeRTOSConfig.h:
+/home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/portable.h:
 
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/portable.h:
+/home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/portmacro.h:
 
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/portmacro.h:
+/home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/mpu_wrappers.h:
 
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/mpu_wrappers.h:
+/home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/task.h:
 
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/task.h:
-
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/list.h:
-
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/queue.h:
-
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/semphr.h:
-
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/include/queue.h:
+/home/yukult400/ndsdev/Team6/test2/FreeRTOS/include/list.h:
 
 /home/yukult400/ndsdev/devkitPro/libnds/include/nds.h:
 
@@ -208,19 +188,3 @@ ControlTask.o: /home/yukult400/ndsdev/Team6/temp/source/ControlTask.c \
 /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/video.h:
 
 /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h:
-
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/sevencore_io.h:
-
-/home/yukult400/ndsdev/devkitPro/libnds/include/maxmod9.h:
-
-/home/yukult400/ndsdev/devkitPro/libnds/include/mm_types.h:
-
-/home/yukult400/ndsdev/Team6/temp/build/soundbank.h:
-
-/home/yukult400/ndsdev/Team6/temp/build/soundbank_bin.h:
-
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/card_spi.h:
-
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/gdbStub.h:
-
-/home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/gdbStubAsm.h:

@@ -67,6 +67,10 @@ main.o: /home/yukult400/ndsdev/Team6/temp/source/main.c \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/video.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h \
  /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/sevencore_io.h \
+ /home/yukult400/ndsdev/devkitPro/libnds/include/maxmod9.h \
+ /home/yukult400/ndsdev/devkitPro/libnds/include/mm_types.h \
+ /home/yukult400/ndsdev/Team6/temp/build/soundbank.h \
+ /home/yukult400/ndsdev/Team6/temp/build/soundbank_bin.h \
  /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/card_spi.h \
  /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/gdbStub.h \
  /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/gdbStubAsm.h
@@ -206,6 +210,14 @@ main.o: /home/yukult400/ndsdev/Team6/temp/source/main.c \
 /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
 /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/sevencore_io.h:
+
+/home/yukult400/ndsdev/devkitPro/libnds/include/maxmod9.h:
+
+/home/yukult400/ndsdev/devkitPro/libnds/include/mm_types.h:
+
+/home/yukult400/ndsdev/Team6/temp/build/soundbank.h:
+
+/home/yukult400/ndsdev/Team6/temp/build/soundbank_bin.h:
 
 /home/yukult400/ndsdev/Team6/temp/FreeRTOS/NDS/card_spi.h:
 

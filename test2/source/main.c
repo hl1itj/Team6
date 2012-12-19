@@ -7,19 +7,16 @@
 
 #include "init.h"
 
-void InitDebug(void);
-
-
 static portTASK_FUNCTION(ControlTask, pvParameters);
 
-
-#define MAX_KEY_LOG		10
-
+void InitDebug(void);
 
 int
 main(void)
 {
 	InitDebug();
+	init_virtual_io(ENABLE_LED);	// Enable Virtual IO Devices
+	init_printf();					// Initialize Bottom Screen for printf()
 
 	xTaskCreate(ControlTask,
 			(const signed char * const)"ControlTask",
@@ -33,6 +30,8 @@ main(void)
 		;
 	return 0;
 }
+
+void Control(void);
 
 void
 InitDebug(void)
@@ -52,7 +51,5 @@ portTASK_FUNCTION(ControlTask, pvParameters )
 		Control();
 	}
 }
-
-
 
 
