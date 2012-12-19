@@ -1,7 +1,0 @@
-http://www.palib.info/wiki/doku.php?id=day1ko#관련_자료
-
-http://www.palib.info/Doc/PAlibDoc%20Eng/group___sound_a_r_m9.html#ga0 //사운드API
-
-
-
-devkirp 2.1 realse 는 지원하지 않음 2.0 설치

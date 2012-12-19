@@ -1,2 +1,1 @@
-gdbStubAsm.o: \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/gdbStubAsm.s
+gdbStubAsm.o: /home/yukult400/Desktop/temp/FreeRTOS/NDS/gdbStubAsm.s

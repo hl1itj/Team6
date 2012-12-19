@@ -19,16 +19,16 @@ BUILD		:=	build
 SOURCES		:=	gfx FreeRTOS FreeRTOS/NDS source
 INCLUDES	:=	include build FreeRTOS/include FreeRTOS/NDS
 GRAPHICS	:=  image
-
+AUDIO       :=  audio
 
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
-#ARCH	:=	-mthumb -mthumb-interwork
-ARCH	:=	-mthumb -march=armv5te -mtune=arm946e-s
+ARCH	:=	-mthumb -mthumb-interwork
+#ARCH	:=	-mthumb -march=armv5te -mtune=arm946e-s
 
-CFLAGS	:=	-g -Wall \
- 			-fomit-frame-pointer\
+CFLAGS	:=	-g -Wall -O2\
+ 			-march=armv5te -mtune=arm946e-s -fomit-frame-pointer\
 			-ffast-math \
 			$(ARCH)
 
@@ -42,7 +42,7 @@ LDFLAGS	=	-specs=ds_arm9.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
-LIBS	:= -ldswifi9 -lfat -lnds9
+LIBS	:= -ldswifi9 -lfat -lnds9 -lmm9
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
@@ -64,11 +64,36 @@ export VPATH	:=	$(foreach dir,$(SOURCES),$(CURDIR)/$(dir)) \
 					$(foreach dir,$(GRAPHICS),$(CURDIR)/$(dir))
 export DEPSDIR	:=	$(CURDIR)/$(BUILD)
 
+# Collect resource files
 CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
 SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
+
+#추가할 파일 확장자별로 만들어야함.
 BINFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.bin)))
 PNGFILES	:=	$(foreach dir,$(GRAPHICS),$(notdir $(wildcard $(dir)/*.png)))
+PCXFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.pcx)))
+PALFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.pal)))
+RAWFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.raw)))
+MAPFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.map)))
+JPGFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.jpg)))
+GIFFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.gif)))
+BMPFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.bmp)))
+MP3FILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.mp3)))
+
+# Collect audio files supported by Maxmod (mod, xm, s3m, it, wav)
+export AUDIOFILES := $(foreach file,$(notdir $(wildcard $(AUDIO)/*.mod)),$(CURDIR)/$(AUDIO)/$(file)) \
+                     $(foreach file,$(notdir $(wildcard $(AUDIO)/*.mid)),$(CURDIR)/$(AUDIO)/$(file)) \
+                     $(foreach file,$(notdir $(wildcard $(AUDIO)/*.xm)),$(CURDIR)/$(AUDIO)/$(file))  \
+                     $(foreach file,$(notdir $(wildcard $(AUDIO)/*.it)),$(CURDIR)/$(AUDIO)/$(file))  \
+                     $(foreach file,$(notdir $(wildcard $(AUDIO)/*.wav)),$(CURDIR)/$(AUDIO)/$(file))
+
+ifeq ($(strip $(AUDIOFILES)),)
+	DONT_BUILD_MAXMOD_SOUNDBANK := YES
+else
+	# Add the Maxmod soundbank to the list of bin files
+	BINFILES += soundbank_bin.bin
+endif
  
 #---------------------------------------------------------------------------------
 # use CXX for linking C++ projects, CC for standard C
@@ -84,7 +109,9 @@ else
 endif
 #---------------------------------------------------------------------------------
 
-export OFILES	:=	$(BINFILES:.bin=.o) \
+export OFILES	:=	$(BINFILES:.bin=.o) $(PCXFILES:.pcx=.o) $(PALFILES:.pal=.o) \
+					$(RAWFILES:.raw=.o) $(MAPFILES:.map=.o) $(JPGFILES:.jpg=.o) \
+					$(GIFFILES:.gif=.o) $(BMPFILES:.bmp=.o) $(MP3FILES:.mp3=.o) \
 					$(PNGFILES:.png=.o) \
 					$(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
  
@@ -117,18 +144,93 @@ DEPENDS	:=	$(OFILES:.o=.d)
 #---------------------------------------------------------------------------------
 $(OUTPUT).nds	: 	$(OUTPUT).elf
 $(OUTPUT).elf	:	$(OFILES)
+
+#---------------------------------------------------------------------------------
+# Rule to build the soundbank from audio files
+#---------------------------------------------------------------------------------
+soundbank_bin.bin: $(AUDIOFILES)
+#---------------------------------------------------------------------------------
+ifneq ($(strip $(DONT_BUILD_MAXMOD_SOUNDBANK)), YES)
+	@echo "Generating soundbank..."
+	@echo
+	@mmutil $^ -d -osoundbank_bin.bin -hsoundbank.h
+endif
+
+define bin2o
+	cp $< $*
+	bin2s $* | $(AS) -o $@
+	rm $*
+
+	echo "extern const u8" $*"[];" > $*.h
+	echo "extern const u32" $*_size";" >> $*.h
+endef
+
  
 #---------------------------------------------------------------------------------
-%.o	:	%.bin
+%.o: %.bin
 #---------------------------------------------------------------------------------
 	@echo $(notdir $<)
-	$(bin2o)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.pcx
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.pal
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.raw
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.map
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.jpg
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.gif
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.bmp
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.mp3
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
 
 #---------------------------------------------------------------------------------
 %.s %.h	: %.png %.grit
 #---------------------------------------------------------------------------------
 	grit $< -fts -o$*
  
+ 
+#---------------------------------------------------------------------------------
+# Header file dependencies
+#---------------------------------------------------------------------------------
+-include $(DEPSDIR)/*.d
+
 -include $(DEPENDS)
  
 #---------------------------------------------------------------------------------------

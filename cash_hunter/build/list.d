@@ -1,22 +1,22 @@
-list.o: /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/list.c \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/FreeRTOS.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/projdefs.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/FreeRTOSConfig.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/portable.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/portmacro.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/mpu_wrappers.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/list.h
+list.o: /home/yukult400/Desktop/temp/FreeRTOS/list.c \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/FreeRTOS.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/projdefs.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/NDS/FreeRTOSConfig.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/portable.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/NDS/portmacro.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/mpu_wrappers.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/list.h
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/FreeRTOS.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/FreeRTOS.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/projdefs.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/projdefs.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/FreeRTOSConfig.h:
+/home/yukult400/Desktop/temp/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/portable.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/portable.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/portmacro.h:
+/home/yukult400/Desktop/temp/FreeRTOS/NDS/portmacro.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/mpu_wrappers.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/mpu_wrappers.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/list.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/list.h:

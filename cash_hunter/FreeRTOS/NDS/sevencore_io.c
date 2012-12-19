@@ -15,8 +15,6 @@
 #include <nds.h>
 #include <sevencore_io.h>
 
-#include "up.h"
-#include "down.h"
 
 #define printf  iprintf
 xQueueHandle KeyQueue;
@@ -232,7 +230,7 @@ init_virtual_io(u32 devices)
         videoSetMode(MODE_5_2D);
         vramSetBankA(VRAM_A_MAIN_BG);
         bgInit(3,BgType_Bmp16, BgSize_B16_256x256, 0, 0);
-        decompress(upBitmap, BG_GFX, LZ77Vram);
+       // decompress(upBitmap, BG_GFX, LZ77Vram);
     }
     if (virtual_io_enabled & (ENABLE_SW | ENABLE_MATRIX)) {
     	if (bottomScreen.consoleInitialised)
@@ -240,7 +238,7 @@ init_virtual_io(u32 devices)
         videoSetModeSub(MODE_5_2D);
         vramSetBankC(VRAM_C_SUB_BG);
         bgInitSub(3,BgType_Bmp16, BgSize_B16_256x256, 0, 0);
-        decompress(downBitmap, BG_GFX_SUB, LZ77Vram);
+       // decompress(downBitmap, BG_GFX_SUB, LZ77Vram);
     }
     return 0;
 }
@@ -253,7 +251,7 @@ init_printf(void)
    	// Enable Bottom LCD for printf();
     videoSetModeSub(MODE_0_2D);
     vramSetBankC(VRAM_C_SUB_BG);
-    consoleInit(&bottomScreen, 3,BgType_Text4bpp, BgSize_T_256x256, 31, 0, false, true);
+    consoleInit(&bottomScreen, 3,BgType_Text4bpp, BgSize_T_256x256, 31, 0, FALSE, TRUE);
     consoleSelect(&bottomScreen);
     return 0;
 }

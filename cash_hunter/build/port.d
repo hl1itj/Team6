@@ -1,12 +1,12 @@
-port.o: /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/port.c \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/FreeRTOS.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/projdefs.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/FreeRTOSConfig.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/portable.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/portmacro.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/mpu_wrappers.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/task.h \
- /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/list.h \
+port.o: /home/yukult400/Desktop/temp/FreeRTOS/NDS/port.c \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/FreeRTOS.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/projdefs.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/NDS/FreeRTOSConfig.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/portable.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/NDS/portmacro.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/mpu_wrappers.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/task.h \
+ /home/yukult400/Desktop/temp/FreeRTOS/include/list.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/libversion.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/ndstypes.h \
@@ -63,21 +63,21 @@ port.o: /home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/port.c \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/video.h \
  /home/yukult400/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/FreeRTOS.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/FreeRTOS.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/projdefs.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/projdefs.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/FreeRTOSConfig.h:
+/home/yukult400/Desktop/temp/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/portable.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/portable.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/NDS/portmacro.h:
+/home/yukult400/Desktop/temp/FreeRTOS/NDS/portmacro.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/mpu_wrappers.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/mpu_wrappers.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/task.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/task.h:
 
-/home/yukult400/ndsdev/workspace/keymatrix/FreeRTOS/include/list.h:
+/home/yukult400/Desktop/temp/FreeRTOS/include/list.h:
 
 /home/yukult400/ndsdev/devkitPro/libnds/include/nds.h:
 
