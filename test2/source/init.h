@@ -26,6 +26,7 @@
 #include "soundbank.h"
 #include "soundbank_bin.h"
 #include "drunkenlogo.h"
+#include "piano_image.h"
 #include "woman.h"
 
 #include "card_spi.h"		// Debugging Headers

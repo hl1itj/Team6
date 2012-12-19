@@ -76,34 +76,42 @@ void initWoman(Woman *sprite, u8* gfx) {
 //-*-
 
 void Control() {
+
 	consoleDemoInit();
 
 	//display background
 	videoSetMode(MODE_5_2D);
-	videoSetModeSub(MODE_0_2D);
 	vramSetBankA(VRAM_A_MAIN_BG_0x06000000);
-
-
-	consoleDemoInit();
-
+	//bgInit(3,BgType_Bmp16, BgSize_B16_256x256, 0, 0);
+	//decompress(drunkenlogoBitmap, BG_GFX, LZ77Vram);
+	//consoleDemoInit();
 	int bg3 = bgInit(3, BgType_Bmp8, BgSize_B8_256x256, 0, 0);
-
 	dmaCopy(drunkenlogoBitmap, bgGetGfxPtr(bg3), 256 * 256);
 	dmaCopy(drunkenlogoPal, BG_PALETTE, 256 * 2);
 
+	 consoleDemoInit();
+
+	 //set up the sub display
+	 videoSetModeSub(MODE_5_2D);
+	 vramSetBankC(VRAM_C_SUB_BG);
+	 //bgInitSub(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
+	 //decompress(piano_imageBitmap, BG_GFX_SUB, LZ77Vram);
+
+	 bgInitSub(3, BgType_Bmp8 , BgSize_R_128x128, 0,0);
+	 /*
+	 decompress(piano_imageBitmap, BG_GFX_SUB,  LZ77Vram);
+	 */
 
 	//-----------------------------------------------------------------
 	// Initialize the graphics engines
 	//-----------------------------------------------------------------
 	//videoSetMode(MODE_0_2D);
 	//videoSetModeSub(MODE_0_2D);
-
 	//vramSetBankA(VRAM_A_MAIN_SPRITE);
 	vramSetBankD(VRAM_D_SUB_SPRITE);
 
 	//oamInit(&oamMain, SpriteMapping_1D_128, false);
 	oamInit(&oamSub, SpriteMapping_1D_128, false);
-
 
 	//Load Sound data
 	mmInitDefaultMem((mm_addr) soundbank_bin);
@@ -121,6 +129,10 @@ void Control() {
 	mm_sfxhand amb = 0;
 
 	Woman woman = { 0, 0 };
+
+	vramSetBankC(VRAM_C_SUB_BG);
+	bgInitSub(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
+	decompress(piano_imageBitmap, BG_GFX_SUB, LZ77Vram);
 
 	//-----------------------------------------------------------------
 	// Initialize the two sprites
@@ -140,7 +152,8 @@ void Control() {
 
 		int keys = keysHeld();
 
-		if(keys & KEY_START) break;
+		if (keys & KEY_START)
+			break;
 
 		if (keys) {
 

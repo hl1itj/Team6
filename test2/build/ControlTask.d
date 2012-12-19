@@ -72,6 +72,7 @@ ControlTask.o: /home/yukult400/ndsdev/Team6/test2/source/ControlTask.c \
  /home/yukult400/ndsdev/Team6/test2/build/soundbank.h \
  /home/yukult400/ndsdev/Team6/test2/build/soundbank_bin.h \
  /home/yukult400/ndsdev/Team6/test2/build/drunkenlogo.h \
+ /home/yukult400/ndsdev/Team6/test2/build/piano_image.h \
  /home/yukult400/ndsdev/Team6/test2/build/woman.h \
  /home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/card_spi.h \
  /home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/gdbStub.h \
@@ -222,6 +223,8 @@ ControlTask.o: /home/yukult400/ndsdev/Team6/test2/source/ControlTask.c \
 /home/yukult400/ndsdev/Team6/test2/build/soundbank_bin.h:
 
 /home/yukult400/ndsdev/Team6/test2/build/drunkenlogo.h:
+
+/home/yukult400/ndsdev/Team6/test2/build/piano_image.h:
 
 /home/yukult400/ndsdev/Team6/test2/build/woman.h:
 
