@@ -1,1 +1,2 @@
-gdbStubAsm.o: /home/yukult400/Desktop/temp/FreeRTOS/NDS/gdbStubAsm.s
+gdbStubAsm.o: \
+ /home/hansung/ndsdev/Team6/cash_hunter/FreeRTOS/NDS/gdbStubAsm.s
