@@ -1,5 +1,4 @@
 #include "init.h"
-#include "sevencore_io.h"
 
 extern xQueueHandle KeyQueue;
 #define MAX_KEY_LOG		10
