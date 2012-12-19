@@ -1,21 +1,18 @@
 #include "init.h"
-
-mm_sound_effect ambulance = {
-		{ SFX_AMBULANCE } ,			// id
-		(int)(1.0f * (1<<10)),	// rate
+#include "drunkenlogo.h"
+mm_sound_effect ambulance = { { SFX_AMBULANCE },			// id
+		(int) (1.0f * (1 << 10)),	// rate
 		0,		// handle
 		255,	// volume
 		0,		// panning
-	};
+		};
 
-	mm_sound_effect boom = {
-		{ SFX_BOOM } ,			// id
-		(int)(1.0f * (1<<10)),	// rate
+mm_sound_effect boom = { { SFX_BOOM },			// id
+		(int) (1.0f * (1 << 10)),	// rate
 		0,		// handle
 		255,	// volume
 		255,	// panning
-	};
-
+		};
 
 void setPlayData() {
 	//getKey();
@@ -28,6 +25,18 @@ void setPlayData() {
 void Control() {
 	consoleDemoInit();
 
+	//display background
+	videoSetMode(MODE_5_2D);
+	vramSetBankA(VRAM_A_MAIN_BG_0x06000000);
+
+	consoleDemoInit();
+
+	int bg3 = bgInit(3, BgType_Bmp8, BgSize_B8_256x256, 0, 0);
+
+	dmaCopy(drunkenlogoBitmap, bgGetGfxPtr(bg3), 256 * 256);
+	dmaCopy(drunkenlogoPal, BG_PALETTE, 256 * 2);
+
+	//Load Sound data
 	mmInitDefaultMem((mm_addr) soundbank_bin);
 
 	// load the module
@@ -53,18 +62,18 @@ void Control() {
 
 		//--if move key pressed, play ambulance sound
 		// Play looping ambulance sound effect out of left speaker if A button is pressed
-/*
-		if ((keys_pressed & KEY_UP) || (keys_pressed & KEY_DOWN)
-				|| (keys_pressed & KEY_LEFT) || (keys_pressed & KEY_RIGHT)) {
-			amb = mmEffectEx(&ambulance);
-		}
+		/*
+		 if ((keys_pressed & KEY_UP) || (keys_pressed & KEY_DOWN)
+		 || (keys_pressed & KEY_LEFT) || (keys_pressed & KEY_RIGHT)) {
+		 amb = mmEffectEx(&ambulance);
+		 }
 
-		// stop ambulance sound when move button is released
-		if ((keys_pressed & KEY_UP) || (keys_pressed & KEY_DOWN)
-				|| (keys_pressed & KEY_LEFT) || (keys_pressed & KEY_RIGHT)) {
-			mmEffectCancel(amb);
-		}
-*/
+		 // stop ambulance sound when move button is released
+		 if ((keys_pressed & KEY_UP) || (keys_pressed & KEY_DOWN)
+		 || (keys_pressed & KEY_LEFT) || (keys_pressed & KEY_RIGHT)) {
+		 mmEffectCancel(amb);
+		 }
+		 */
 		if ((keys_pressed & KEY_UP)) {
 			amb = mmEffectEx(&ambulance);
 		}
@@ -74,7 +83,6 @@ void Control() {
 			mmEffectCancel(amb);
 		}
 
-
 		//Play explosion sound effect out of right speaker if B button is pressed
 		if (keys_pressed & KEY_B) {
 			mmEffectEx(&boom);
@@ -83,6 +91,5 @@ void Control() {
 			break;
 
 	} while (1);
-
 
 }
