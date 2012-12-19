@@ -31,6 +31,7 @@
 #include "gdbStubAsm.h"
 #include "sevencore_io.h"
 
+#define KEY_MOVE 0xf0
 void Control();
 
 ///------

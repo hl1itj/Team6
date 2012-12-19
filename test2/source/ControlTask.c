@@ -59,27 +59,25 @@ void Control() {
 		scanKeys();
 		keys_pressed = keysDown();
 		keys_released = keysUp();
-
-		//--if move key pressed, play ambulance sound
-		// Play looping ambulance sound effect out of left speaker if A button is pressed
-		/*
-		 if ((keys_pressed & KEY_UP) || (keys_pressed & KEY_DOWN)
-		 || (keys_pressed & KEY_LEFT) || (keys_pressed & KEY_RIGHT)) {
-		 amb = mmEffectEx(&ambulance);
-		 }
-
-		 // stop ambulance sound when move button is released
-		 if ((keys_pressed & KEY_UP) || (keys_pressed & KEY_DOWN)
-		 || (keys_pressed & KEY_LEFT) || (keys_pressed & KEY_RIGHT)) {
-		 mmEffectCancel(amb);
-		 }
-		 */
-		if ((keys_pressed & KEY_UP)) {
+/*
+		if ((keys_pressed & KEY_MOVE)) {
 			amb = mmEffectEx(&ambulance);
 		}
+	*/
+		switch(keys_pressed){
+		case KEY_UP:
+			break;
+		case KEY_DOWN:
+					break;
+		case KEY_LEFT:
+					break;
+		case KEY_RIGHT:
+					break;
+		}
+
 
 		// stop ambulance sound when move button is released
-		if ((keys_released & KEY_UP)) {
+		if ((keys_released & KEY_MOVE)) {
 			mmEffectCancel(amb);
 		}
 
