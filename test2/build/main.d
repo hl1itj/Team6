@@ -71,6 +71,8 @@ main.o: /home/yukult400/ndsdev/Team6/test2/source/main.c \
  /home/yukult400/ndsdev/devkitPro/libnds/include/mm_types.h \
  /home/yukult400/ndsdev/Team6/test2/build/soundbank.h \
  /home/yukult400/ndsdev/Team6/test2/build/soundbank_bin.h \
+ /home/yukult400/ndsdev/Team6/test2/build/drunkenlogo.h \
+ /home/yukult400/ndsdev/Team6/test2/build/woman.h \
  /home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/card_spi.h \
  /home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/gdbStub.h \
  /home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/gdbStubAsm.h
@@ -218,6 +220,10 @@ main.o: /home/yukult400/ndsdev/Team6/test2/source/main.c \
 /home/yukult400/ndsdev/Team6/test2/build/soundbank.h:
 
 /home/yukult400/ndsdev/Team6/test2/build/soundbank_bin.h:
+
+/home/yukult400/ndsdev/Team6/test2/build/drunkenlogo.h:
+
+/home/yukult400/ndsdev/Team6/test2/build/woman.h:
 
 /home/yukult400/ndsdev/Team6/test2/FreeRTOS/NDS/card_spi.h:
 

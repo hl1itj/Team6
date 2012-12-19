@@ -25,6 +25,8 @@
 #include <maxmod9.h>
 #include "soundbank.h"
 #include "soundbank_bin.h"
+#include "drunkenlogo.h"
+#include "woman.h"
 
 #include "card_spi.h"		// Debugging Headers
 #include "gdbStub.h"

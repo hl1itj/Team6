@@ -174,8 +174,8 @@ endef
 %.s %.h	: %.png %.grit
 #---------------------------------------------------------------------------------
 	grit $< -fts -o$*
-	grit /home/yukult400/ndsdev/Team6/test2/sprites/woman.png -ff../sprites/sprite.grit -owoman woman.s
-	arm-eabi-gcc -MMD -MP -MF /home/yukult400/ndsdev/Team6/test2/build/woman.d -x assembler-with-cpp -g -mthumb -mthumb-interwork -c woman.s -o woman.o	
+#	grit /home/yukult400/ndsdev/Team6/test2/sprites/woman.png -ff../sprites/sprite.grit -owoman woman.s
+#	arm-eabi-gcc -MMD -MP -MF /home/yukult400/ndsdev/Team6/test2/build/woman.d -x assembler-with-cpp -g -mthumb -mthumb-interwork -c woman.s -o woman.o	
  
 -include $(DEPENDS)
  
