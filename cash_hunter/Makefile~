@@ -20,7 +20,6 @@ SOURCES		:=	gfx FreeRTOS FreeRTOS/NDS source
 INCLUDES	:=	include build FreeRTOS/include FreeRTOS/NDS
 GRAPHICS	:=  image
 AUDIO       :=  audio
-SPRITES		:=  sprites
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -73,7 +72,14 @@ SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
 #추가할 파일 확장자별로 만들어야함.
 BINFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.bin)))
 PNGFILES	:=	$(foreach dir,$(GRAPHICS),$(notdir $(wildcard $(dir)/*.png)))
-SPRITE_FILES   :=  $(foreach dir, $(SPRITES),$(notdir $(wildcard $(dir)/*.png)))
+PCXFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.pcx)))
+PALFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.pal)))
+RAWFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.raw)))
+MAPFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.map)))
+JPGFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.jpg)))
+GIFFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.gif)))
+BMPFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.bmp)))
+MP3FILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.mp3)))
 
 # Collect audio files supported by Maxmod (mod, xm, s3m, it, wav)
 export AUDIOFILES := $(foreach file,$(notdir $(wildcard $(AUDIO)/*.mod)),$(CURDIR)/$(AUDIO)/$(file)) \
@@ -103,15 +109,15 @@ else
 endif
 #---------------------------------------------------------------------------------
 
-export OFILES	:=	$(BINFILES:.bin=.o) \
-			$(PNGFILES:.png=.o) \
-			$(SPRITE_FILES:.png=.o) \
-			$(addsuffix .o,$(BINFILES)) \
-			$(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
+export OFILES	:=	$(BINFILES:.bin=.o) $(PCXFILES:.pcx=.o) $(PALFILES:.pal=.o) \
+					$(RAWFILES:.raw=.o) $(MAPFILES:.map=.o) $(JPGFILES:.jpg=.o) \
+					$(GIFFILES:.gif=.o) $(BMPFILES:.bmp=.o) $(MP3FILES:.mp3=.o) \
+					$(PNGFILES:.png=.o) \
+					$(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
  
 export INCLUDE	:=	$(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
-			$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
-			-I$(CURDIR)/$(BUILD)
+					$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
+					-I$(CURDIR)/$(BUILD)
  
 export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
  
@@ -167,9 +173,52 @@ endef
 	@$(bin2o)
 
 #---------------------------------------------------------------------------------
-%.s %.h : %.png
-	grit $< -ff../sprites/sprite.grit -o$*
+%.o: %.pcx
 #---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.pal
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.raw
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.map
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.jpg
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.gif
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.bmp
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
+
+#---------------------------------------------------------------------------------
+%.o: %.mp3
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	@$(bin2o)
 
 #---------------------------------------------------------------------------------
 %.s %.h	: %.png %.grit
