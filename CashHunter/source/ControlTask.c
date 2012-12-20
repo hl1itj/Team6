@@ -230,12 +230,12 @@ void Control() {
 				videoSetMode(MODE_0_2D);
 				vramSetBankB(VRAM_B_MAIN_BG);
 				consoleInit(&topScreen, 3, BgType_Text4bpp, BgSize_T_256x256,
-						31, 0, false, true);
+						31, 0, true, true);
 				consoleSelect(&topScreen);
 				c = -1;
 			}
 			iprintf("\n\n\tHello DS dev'rs\n");
-			iprintf("캐릭터 위치 x = %d y = %d", woman.x, woman.y);
+			iprintf("Location x = %d y = %d", woman.x, woman.y);
 		}
 
 		animateWoman(&woman);
