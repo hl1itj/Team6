@@ -1054,363 +1054,363 @@ Linker script and memory map
  .fini          0x02015c9c        0x8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtn.o
                 0x02015ca4                __text_end = .
 
-.rodata         0x02015ca8    0x59098
+.rodata         0x02015ca8    0x59f58
  *(.rodata)
- .rodata        0x02015ca8    0x340d8 soundbank_bin.o
+ .rodata        0x02015ca8    0x34f98 soundbank_bin.o
                 0x02015ca8                soundbank_bin
-                0x02049d7c                soundbank_bin_end
-                0x02049d7c                soundbank_bin_size
- .rodata        0x02049d80     0x3200 coin.o
-                0x02049d80                coinTiles
-                0x0204cd80                coinPal
- .rodata        0x0204cf80     0xc200 drunkenlogo.o
-                0x0204cf80                drunkenlogoBitmap
-                0x02058f80                drunkenlogoPal
- .rodata        0x02059180     0xb814 piano_image.o
-                0x02059180                piano_imageBitmap
- .rodata        0x02064994     0x3200 woman.o
-                0x02064994                womanTiles
-                0x02067994                womanPal
- .rodata        0x02067b94       0x20 tasks.o
- .rodata        0x02067bb4      0x1b8 gdbStub.o
- .rodata        0x02067d6c      0x358 sevencore_io.o
- .rodata        0x020680c4      0x3c4 ControlTask.o
- .rodata        0x02068488        0xc main.o
- .rodata        0x02068494      0x200 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
- .rodata        0x02068694       0x14 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(decompress.o)
- .rodata        0x020686a8      0x308 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(trig.o)
-                0x020686a8                SIN_LUT
-                0x020687ac                TAN_LUT
- .rodata        0x020689b0       0x8c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
- .rodata        0x02068a3c     0x2004 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(default_font.bin.o)
-                0x02068a3c                default_font_bin
-                0x0206aa3c                default_font_bin_end
-                0x0206aa3c                default_font_bin_size
- .rodata        0x0206aa40        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-impure.o)
-                0x0206aa40                _global_impure_ptr
- .rodata        0x0206aa44      0x340 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiscanf.o)
- .rodata        0x0206ad84      0x184 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfprintf.o)
- .rodata        0x0206af08      0x184 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-vfiprintf.o)
- .rodata        0x0206b08c      0x104 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ctype_.o)
-                0x0206b08c                _ctype_
- .rodata        0x0206b190     0x34f0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-jp2uc.o)
- .rodata        0x0206e680       0xf0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-locale.o)
- .rodata        0x0206e770       0xa8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbtowc_r.o)
- .rodata        0x0206e818      0x128 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mprec.o)
-                0x0206e828                __mprec_tens
-                0x0206e8f0                __mprec_tinytens
-                0x0206e918                __mprec_bigtens
- .rodata        0x0206e940      0x184 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiprintf.o)
- .rodata        0x0206eac4       0x64 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(iosupport.o)
-                0x0206eac4                dotab_stdnull
+                0x0204ac3c                soundbank_bin_end
+                0x0204ac3c                soundbank_bin_size
+ .rodata        0x0204ac40     0x3200 coin.o
+                0x0204ac40                coinTiles
+                0x0204dc40                coinPal
+ .rodata        0x0204de40     0xc200 drunkenlogo.o
+                0x0204de40                drunkenlogoBitmap
+                0x02059e40                drunkenlogoPal
+ .rodata        0x0205a040     0xb814 piano_image.o
+                0x0205a040                piano_imageBitmap
+ .rodata        0x02065854     0x3200 woman.o
+                0x02065854                womanTiles
+                0x02068854                womanPal
+ .rodata        0x02068a54       0x20 tasks.o
+ .rodata        0x02068a74      0x1b8 gdbStub.o
+ .rodata        0x02068c2c      0x358 sevencore_io.o
+ .rodata        0x02068f84      0x3c4 ControlTask.o
+ .rodata        0x02069348        0xc main.o
+ .rodata        0x02069354      0x200 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
+ .rodata        0x02069554       0x14 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(decompress.o)
+ .rodata        0x02069568      0x308 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(trig.o)
+                0x02069568                SIN_LUT
+                0x0206966c                TAN_LUT
+ .rodata        0x02069870       0x8c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
+ .rodata        0x020698fc     0x2004 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(default_font.bin.o)
+                0x020698fc                default_font_bin
+                0x0206b8fc                default_font_bin_end
+                0x0206b8fc                default_font_bin_size
+ .rodata        0x0206b900        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-impure.o)
+                0x0206b900                _global_impure_ptr
+ .rodata        0x0206b904      0x340 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiscanf.o)
+ .rodata        0x0206bc44      0x184 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfprintf.o)
+ .rodata        0x0206bdc8      0x184 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-vfiprintf.o)
+ .rodata        0x0206bf4c      0x104 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ctype_.o)
+                0x0206bf4c                _ctype_
+ .rodata        0x0206c050     0x34f0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-jp2uc.o)
+ .rodata        0x0206f540       0xf0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-locale.o)
+ .rodata        0x0206f630       0xa8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbtowc_r.o)
+ .rodata        0x0206f6d8      0x128 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mprec.o)
+                0x0206f6e8                __mprec_tens
+                0x0206f7b0                __mprec_tinytens
+                0x0206f7d8                __mprec_bigtens
+ .rodata        0x0206f800      0x184 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiprintf.o)
+ .rodata        0x0206f984       0x64 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(iosupport.o)
+                0x0206f984                dotab_stdnull
  *all.rodata*(*)
  *(.roda)
  *(.rodata.*)
  .rodata.str1.4
-                0x0206eb28       0x49 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
+                0x0206f9e8       0x49 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
                                  0x4c (size before relaxing)
- *fill*         0x0206eb71        0x3 ff
+ *fill*         0x0206fa31        0x3 ff
  .rodata.str1.4
-                0x0206eb74       0x44 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sassert.o)
+                0x0206fa34       0x44 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sassert.o)
  .rodata.str1.4
-                0x0206ebb8        0x2 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-impure.o)
+                0x0206fa78        0x2 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-impure.o)
                                   0x4 (size before relaxing)
- *fill*         0x0206ebba        0x2 ff
+ *fill*         0x0206fa7a        0x2 ff
  .rodata.str1.4
-                0x0206ebbc       0x42 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfprintf.o)
+                0x0206fa7c       0x42 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfprintf.o)
                                  0x44 (size before relaxing)
  .rodata.str1.4
                 0x00000000       0x30 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-vfiprintf.o)
- *fill*         0x0206ebfe        0x2 ff
+ *fill*         0x0206fabe        0x2 ff
  .rodata.str1.4
-                0x0206ec00       0x10 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-dtoa.o)
+                0x0206fac0       0x10 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-dtoa.o)
                                  0x14 (size before relaxing)
  .rodata.str1.4
-                0x0206ec10       0x12 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-jp2uc.o)
+                0x0206fad0       0x12 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-jp2uc.o)
                                  0x14 (size before relaxing)
- *fill*         0x0206ec22        0x2 ff
+ *fill*         0x0206fae2        0x2 ff
  .rodata.str1.4
-                0x0206ec24      0x112 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-locale.o)
+                0x0206fae4      0x112 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-locale.o)
                                 0x130 (size before relaxing)
  .rodata.str1.4
                 0x00000000        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbrtowc.o)
  .rodata.str1.4
                 0x00000000       0x30 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiprintf.o)
- *fill*         0x0206ed36        0x2 ff
+ *fill*         0x0206fbf6        0x2 ff
  .rodata.str1.4
-                0x0206ed38        0x8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(iosupport.o)
+                0x0206fbf8        0x8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(iosupport.o)
  *(.gnu.linkonce.r*)
-                0x0206ed40                . = ALIGN (0x4)
+                0x0206fc00                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0206ed40                __exidx_start = .
+                0x0206fc00                __exidx_start = .
 
 ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0206ed40                __exidx_end = .
-                0x0206ed40                . = ALIGN (0x4)
-                0x0206ed40                PROVIDE (__preinit_array_start, .)
+                0x0206fc00                __exidx_end = .
+                0x0206fc00                . = ALIGN (0x4)
+                0x0206fc00                PROVIDE (__preinit_array_start, .)
 
 .preinit_array
  *(.preinit_array)
-                0x0206ed40                PROVIDE (__preinit_array_end, .)
-                0x0206ed40                PROVIDE (__init_array_start, .)
+                0x0206fc00                PROVIDE (__preinit_array_end, .)
+                0x0206fc00                PROVIDE (__init_array_start, .)
 
-.init_array     0x0206ed40        0x4
+.init_array     0x0206fc00        0x4
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x0206ed40        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
-                0x0206ed44                PROVIDE (__init_array_end, .)
-                0x0206ed44                PROVIDE (__fini_array_start, .)
+ .init_array    0x0206fc00        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
+                0x0206fc04                PROVIDE (__init_array_end, .)
+                0x0206fc04                PROVIDE (__fini_array_start, .)
 
-.fini_array     0x0206ed44        0x4
+.fini_array     0x0206fc04        0x4
  *(.fini_array)
- .fini_array    0x0206ed44        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
+ .fini_array    0x0206fc04        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
  *(SORT(.fini_array.*))
-                0x0206ed48                PROVIDE (__fini_array_end, .)
+                0x0206fc08                PROVIDE (__fini_array_end, .)
 
-.ctors          0x0206ed48        0x0
+.ctors          0x0206fc08        0x0
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x0206ed48                . = ALIGN (0x4)
+                0x0206fc08                . = ALIGN (0x4)
 
-.dtors          0x0206ed48        0x0
+.dtors          0x0206fc08        0x0
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x0206ed48                . = ALIGN (0x4)
+                0x0206fc08                . = ALIGN (0x4)
 
-.eh_frame       0x0206ed48        0x4
+.eh_frame       0x0206fc08        0x4
  *(.eh_frame)
- .eh_frame      0x0206ed48        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
- .eh_frame      0x0206ed48        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtend.o
-                0x0206ed4c                . = ALIGN (0x4)
+ .eh_frame      0x0206fc08        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
+ .eh_frame      0x0206fc08        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtend.o
+                0x0206fc0c                . = ALIGN (0x4)
 
 .gcc_except_table
-                0x0206ed4c        0x0
+                0x0206fc0c        0x0
  *(.gcc_except_table)
-                0x0206ed4c                . = ALIGN (0x4)
+                0x0206fc0c                . = ALIGN (0x4)
 
-.jcr            0x0206ed4c        0x4
+.jcr            0x0206fc0c        0x4
  *(.jcr)
- .jcr           0x0206ed4c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
- .jcr           0x0206ed4c        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtend.o
+ .jcr           0x0206fc0c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
+ .jcr           0x0206fc0c        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtend.o
 
 .got
  *(.got.plt)
  *(.got)
  *(.rel.got)
 
-.ewram          0x0206ed50        0x0
-                0x0206ed50                __ewram_start = ABSOLUTE (.)
+.ewram          0x0206fc10        0x0
+                0x0206fc10                __ewram_start = ABSOLUTE (.)
  *(.ewram)
  *ewram.*(.text)
-                0x0206ed50                . = ALIGN (0x4)
+                0x0206fc10                . = ALIGN (0x4)
 
-.data           0x0206ed50      0xb98
-                0x0206ed50                __data_start = ABSOLUTE (.)
+.data           0x0206fc10      0xb98
+                0x0206fc10                __data_start = ABSOLUTE (.)
  *(.data)
- .data          0x0206ed50        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/ds_arm9_crt0.o
- .data          0x0206ed50        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crti.o
- .data          0x0206ed50        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
-                0x0206ed50                __dso_handle
- .data          0x0206ed54        0x0 soundbank_bin.o
- .data          0x0206ed54        0x0 coin.o
- .data          0x0206ed54        0x0 drunkenlogo.o
- .data          0x0206ed54        0x0 piano_image.o
- .data          0x0206ed54        0x0 woman.o
- .data          0x0206ed54        0x0 croutine.o
- .data          0x0206ed54        0x0 list.o
- .data          0x0206ed54        0x0 queue.o
- .data          0x0206ed54        0x4 tasks.o
- .data          0x0206ed58        0x4 card_spi.o
- .data          0x0206ed5c        0x8 gdbStub.o
-                0x0206ed60                pRegisters
- .data          0x0206ed64        0x0 heap_3.o
- .data          0x0206ed64        0x4 port.o
- .data          0x0206ed68        0x4 portISR.o
-                0x0206ed68                ulCriticalNesting
- .data          0x0206ed6c       0x34 sevencore_io.o
- .data          0x0206eda0       0x1c ControlTask.o
-                0x0206eda4                ambulance
-                0x0206edb0                boom
- .data          0x0206edbc        0x4 main.o
- .data          0x0206edc0        0x0 gdbStubAsm.o
- .data          0x0206edc0        0x0 port_asm.o
- .data          0x0206edc0       0x60 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(background.o)
-                0x0206edc0                bgScrollTable
-                0x0206ede0                bgTransform
-                0x0206ee00                bgControl
- .data          0x0206ee20       0x64 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
-                0x0206ee20                currentConsole
-                0x0206ee24                defaultConsole
- .data          0x0206ee84        0xc /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(decompress.o)
-                0x0206ee84                decomStream
- .data          0x0206ee90        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptions.o)
- .data          0x0206ee90        0x3 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(keys.o)
- .data          0x0206ee93        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sassert.o)
- *fill*         0x0206ee93        0x1 ff
- .data          0x0206ee94       0x30 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite.o)
-                0x0206ee94                oamMain
-                0x0206eeac                oamSub
- .data          0x0206eec4        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite_alloc.o)
- .data          0x0206eec4        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(touch.o)
- .data          0x0206eec4        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(trig.o)
- .data          0x0206eec4        0x4 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
- .data          0x0206eec8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(initSystem.o)
- .data          0x0206eec8       0x10 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(fifosystem.o)
-                0x0206eec8                fifo_freewords
-                0x0206eecc                fifo_buffer_free
-                0x0206eed0                fifo_send_queue
-                0x0206eed4                fifo_receive_queue
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interrupts.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(libnds_exit.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(syscalls.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dcache.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptionHandler.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(mpu_setup.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(biosCalls.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(debugprint.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interruptDispatcher.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(swiSoftReset.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(default_font.bin.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dynamicArray.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(system.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(video.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_comms.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_main9.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_memory.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_soundbank.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_flusher.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_udivsi3.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_divsi3.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_dvmd_tls.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_muldi3.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-bsearch.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fclose.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fflush.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-findfp.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fopen.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fread.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-freer.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fseek.o)
- .data          0x0206eed8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fwalk.o)
- .data          0x0206eed8      0x430 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-impure.o)
-                0x0206eed8                _impure_ptr
- .data          0x0206f308        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-init.o)
- .data          0x0206f308        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-iprintf.o)
- .data          0x0206f308        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-makebuf.o)
- .data          0x0206f308        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-malloc.o)
- .data          0x0206f308      0x410 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mallocr.o)
-                0x0206f308                __malloc_av_
-                0x0206f710                __malloc_sbrk_base
-                0x0206f714                __malloc_trim_threshold
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memcpy-stub.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memset.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mlock.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-realloc.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-reallocr.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-refill.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-setvbuf.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-siscanf.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-sprintf.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-stdio.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcat.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcpy.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strlen.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncpy.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiscanf.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfprintf.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ungetc.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-vfiprintf.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcrtomb.o)
- .data          0x0206f718        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcsrtombs.o)
- .data          0x0206f718        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wctomb_r.o)
-                0x0206f718                __wctomb
- .data          0x0206f71c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wsetup.o)
- .data          0x0206f71c        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ctype_.o)
-                0x0206f71c                __ctype_ptr__
- .data          0x0206f720        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-dtoa.o)
- .data          0x0206f720        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-flags.o)
- .data          0x0206f720        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fputwc.o)
- .data          0x0206f720        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fvwrite.o)
- .data          0x0206f720        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-iswspace.o)
- .data          0x0206f720        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-jp2uc.o)
- .data          0x0206f720      0x17c /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-locale.o)
-                0x0206f720                __default_locale
-                0x0206f840                __mb_cur_max
- .data          0x0206f89c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbrtowc.o)
- .data          0x0206f89c        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbtowc_r.o)
-                0x0206f89c                __mbtowc
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memchr-stub.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memmove.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mprec.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-sccl.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-s_fpclassify.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcasecmp.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strchr.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcmp.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strlcpy.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncasecmp.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncmp.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoll_r.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtol.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoull_r.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoul.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiprintf.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wbuf.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcsnrtombs.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-callocr.o)
- .data          0x0206f8a0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-getenv_r.o)
- .data          0x0206f8a0        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-environ.o)
-                0x0206f8a0                environ
- .data          0x0206f8a4        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-envlock.o)
- .data          0x0206f8a4       0x44 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(iosupport.o)
-                0x0206f8a8                devoptab_list
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(close.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(fstat.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(isatty.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(lseek.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(open.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(read.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(sbrk.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(times.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(write.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(malloc_vars.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(build_argv.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(syscall_support.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(handle_manager.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_addsubdf3.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_muldivdf3.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_cmpdf2.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_fixdfsi.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_aeabi_uldivmod.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(bpabi.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_divdi3.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_udivdi3.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_clzsi2.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-errno.o)
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtend.o
- .data          0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtn.o
+ .data          0x0206fc10        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/ds_arm9_crt0.o
+ .data          0x0206fc10        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crti.o
+ .data          0x0206fc10        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
+                0x0206fc10                __dso_handle
+ .data          0x0206fc14        0x0 soundbank_bin.o
+ .data          0x0206fc14        0x0 coin.o
+ .data          0x0206fc14        0x0 drunkenlogo.o
+ .data          0x0206fc14        0x0 piano_image.o
+ .data          0x0206fc14        0x0 woman.o
+ .data          0x0206fc14        0x0 croutine.o
+ .data          0x0206fc14        0x0 list.o
+ .data          0x0206fc14        0x0 queue.o
+ .data          0x0206fc14        0x4 tasks.o
+ .data          0x0206fc18        0x4 card_spi.o
+ .data          0x0206fc1c        0x8 gdbStub.o
+                0x0206fc20                pRegisters
+ .data          0x0206fc24        0x0 heap_3.o
+ .data          0x0206fc24        0x4 port.o
+ .data          0x0206fc28        0x4 portISR.o
+                0x0206fc28                ulCriticalNesting
+ .data          0x0206fc2c       0x34 sevencore_io.o
+ .data          0x0206fc60       0x1c ControlTask.o
+                0x0206fc64                ambulance
+                0x0206fc70                boom
+ .data          0x0206fc7c        0x4 main.o
+ .data          0x0206fc80        0x0 gdbStubAsm.o
+ .data          0x0206fc80        0x0 port_asm.o
+ .data          0x0206fc80       0x60 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(background.o)
+                0x0206fc80                bgScrollTable
+                0x0206fca0                bgTransform
+                0x0206fcc0                bgControl
+ .data          0x0206fce0       0x64 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
+                0x0206fce0                currentConsole
+                0x0206fce4                defaultConsole
+ .data          0x0206fd44        0xc /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(decompress.o)
+                0x0206fd44                decomStream
+ .data          0x0206fd50        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptions.o)
+ .data          0x0206fd50        0x3 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(keys.o)
+ .data          0x0206fd53        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sassert.o)
+ *fill*         0x0206fd53        0x1 ff
+ .data          0x0206fd54       0x30 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite.o)
+                0x0206fd54                oamMain
+                0x0206fd6c                oamSub
+ .data          0x0206fd84        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite_alloc.o)
+ .data          0x0206fd84        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(touch.o)
+ .data          0x0206fd84        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(trig.o)
+ .data          0x0206fd84        0x4 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
+ .data          0x0206fd88        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(initSystem.o)
+ .data          0x0206fd88       0x10 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(fifosystem.o)
+                0x0206fd88                fifo_freewords
+                0x0206fd8c                fifo_buffer_free
+                0x0206fd90                fifo_send_queue
+                0x0206fd94                fifo_receive_queue
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interrupts.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(libnds_exit.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(syscalls.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dcache.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptionHandler.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(mpu_setup.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(biosCalls.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(debugprint.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interruptDispatcher.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(swiSoftReset.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(default_font.bin.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dynamicArray.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(system.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(video.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_comms.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_main9.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_memory.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_soundbank.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_flusher.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_udivsi3.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_divsi3.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_dvmd_tls.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_muldi3.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-bsearch.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fclose.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fflush.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-findfp.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fopen.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fread.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-freer.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fseek.o)
+ .data          0x0206fd98        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fwalk.o)
+ .data          0x0206fd98      0x430 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-impure.o)
+                0x0206fd98                _impure_ptr
+ .data          0x020701c8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-init.o)
+ .data          0x020701c8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-iprintf.o)
+ .data          0x020701c8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-makebuf.o)
+ .data          0x020701c8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-malloc.o)
+ .data          0x020701c8      0x410 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mallocr.o)
+                0x020701c8                __malloc_av_
+                0x020705d0                __malloc_sbrk_base
+                0x020705d4                __malloc_trim_threshold
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memcpy-stub.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memset.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mlock.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-realloc.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-reallocr.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-refill.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-setvbuf.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-siscanf.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-sprintf.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-stdio.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcat.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcpy.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strlen.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncpy.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiscanf.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfprintf.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ungetc.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-vfiprintf.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcrtomb.o)
+ .data          0x020705d8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcsrtombs.o)
+ .data          0x020705d8        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wctomb_r.o)
+                0x020705d8                __wctomb
+ .data          0x020705dc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wsetup.o)
+ .data          0x020705dc        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ctype_.o)
+                0x020705dc                __ctype_ptr__
+ .data          0x020705e0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-dtoa.o)
+ .data          0x020705e0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-flags.o)
+ .data          0x020705e0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fputwc.o)
+ .data          0x020705e0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fvwrite.o)
+ .data          0x020705e0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-iswspace.o)
+ .data          0x020705e0        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-jp2uc.o)
+ .data          0x020705e0      0x17c /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-locale.o)
+                0x020705e0                __default_locale
+                0x02070700                __mb_cur_max
+ .data          0x0207075c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbrtowc.o)
+ .data          0x0207075c        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbtowc_r.o)
+                0x0207075c                __mbtowc
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memchr-stub.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memmove.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mprec.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-sccl.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-s_fpclassify.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcasecmp.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strchr.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcmp.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strlcpy.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncasecmp.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncmp.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoll_r.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtol.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoull_r.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoul.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiprintf.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wbuf.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcsnrtombs.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-callocr.o)
+ .data          0x02070760        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-getenv_r.o)
+ .data          0x02070760        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-environ.o)
+                0x02070760                environ
+ .data          0x02070764        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-envlock.o)
+ .data          0x02070764       0x44 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(iosupport.o)
+                0x02070768                devoptab_list
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(close.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(fstat.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(isatty.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(lseek.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(open.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(read.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(sbrk.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(times.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(write.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(malloc_vars.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(build_argv.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(syscall_support.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(handle_manager.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_addsubdf3.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_muldivdf3.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_cmpdf2.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_fixdfsi.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(bpabi.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_divdi3.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_udivdi3.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_clzsi2.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-errno.o)
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtend.o
+ .data          0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtn.o
  *(.data.*)
  *(.gnu.linkonce.d*)
-                0x0206f8e8                . = ALIGN (0x4)
-                0x0206f8e8                __data_end = ABSOLUTE (.)
-                0x0206f8e8                __dtcm_lma = .
-                0x0206f8e8                __bss_vma = .
+                0x020707a8                . = ALIGN (0x4)
+                0x020707a8                __data_end = ABSOLUTE (.)
+                0x020707a8                __dtcm_lma = .
+                0x020707a8                __bss_vma = .
 
-.dtcm           0x0b000000        0x0 load address 0x0206f8e8
+.dtcm           0x0b000000        0x0 load address 0x020707a8
  *(.dtcm)
  *(.dtcm.*)
                 0x0b000000                . = ALIGN (0x4)
                 0x0b000000                __dtcm_end = ABSOLUTE (.)
-                0x0206f8e8                __itcm_lma = (__dtcm_lma + SIZEOF (.dtcm))
+                0x020707a8                __itcm_lma = (__dtcm_lma + SIZEOF (.dtcm))
 
-.itcm           0x01000100      0x194 load address 0x0206f8e8
+.itcm           0x01000100      0x194 load address 0x020707a8
  *(.itcm)
  .itcm          0x01000100       0xc8 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interrupts.o)
                 0x01000100                irqTable
@@ -1419,9 +1419,9 @@ ARM.exidx
  *itcm.*(.text)
                 0x01000294                . = ALIGN (0x4)
                 0x01000294                __itcm_end = ABSOLUTE (.)
-                0x0206fa7c                __vectors_lma = (__itcm_lma + SIZEOF (.itcm))
+                0x0207093c                __vectors_lma = (__itcm_lma + SIZEOF (.itcm))
 
-.vectors        0x01000000        0x0 load address 0x0206fa7c
+.vectors        0x01000000        0x0 load address 0x0207093c
  *(.vectors)
  *vectors.*(.text)
                 0x01000000                . = ALIGN (0x4)
@@ -1434,223 +1434,223 @@ ARM.exidx
                 0x0b000000                . = ALIGN (0x4)
                 0x0b000000                __sbss_end = ABSOLUTE (.)
 
-.bss            0x0206f8e8     0x4ed0
-                0x0206f8e8                __bss_start = ABSOLUTE (.)
-                0x0206f8e8                __bss_start__ = ABSOLUTE (.)
+.bss            0x020707a8     0x4ed0
+                0x020707a8                __bss_start = ABSOLUTE (.)
+                0x020707a8                __bss_start__ = ABSOLUTE (.)
  *(.dynbss)
  *(.gnu.linkonce.b*)
  *(.bss*)
- .bss           0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/ds_arm9_crt0.o
- .bss           0x0206f8e8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crti.o
- .bss           0x0206f8e8       0x1c /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
- .bss           0x0206f904        0x0 soundbank_bin.o
- .bss           0x0206f904        0x0 coin.o
- .bss           0x0206f904        0x0 drunkenlogo.o
- .bss           0x0206f904        0x0 piano_image.o
- .bss           0x0206f904        0x0 woman.o
- .bss           0x0206f904       0x80 croutine.o
-                0x0206f970                pxCurrentCoRoutine
- .bss           0x0206f984        0x0 list.o
- .bss           0x0206f984        0x0 queue.o
- .bss           0x0206f984     0x14cc tasks.o
-                0x0206f984                pxCurrentTCB
- .bss           0x02070e50        0x8 card_spi.o
- .bss           0x02070e58     0x1050 gdbStub.o
-                0x02071e58                regMem
- .bss           0x02071ea8        0x0 heap_3.o
- .bss           0x02071ea8        0x0 port.o
- .bss           0x02071ea8        0x0 portISR.o
- .bss           0x02071ea8       0x70 sevencore_io.o
- .bss           0x02071f18        0x0 ControlTask.o
- .bss           0x02071f18        0x0 main.o
- .bss           0x02071f18        0x0 gdbStubAsm.o
- .bss           0x02071f18        0x0 port_asm.o
- .bss           0x02071f18        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(background.o)
- .bss           0x02071f18        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
- .bss           0x02071f18        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(decompress.o)
- .bss           0x02071f18        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptions.o)
- .bss           0x02071f18        0x6 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(keys.o)
- .bss           0x02071f1e        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sassert.o)
- .bss           0x02071f1e        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite.o)
- .bss           0x02071f1e        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite_alloc.o)
- .bss           0x02071f1e        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(touch.o)
- .bss           0x02071f1e        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(trig.o)
- *fill*         0x02071f1e        0x2 00
- .bss           0x02071f20        0x8 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
- .bss           0x02071f28        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(initSystem.o)
- .bss           0x02071f28        0x8 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(fifosystem.o)
-                0x02071f2c                processing
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interrupts.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(libnds_exit.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(syscalls.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dcache.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptionHandler.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(mpu_setup.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(biosCalls.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(debugprint.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interruptDispatcher.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(swiSoftReset.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(default_font.bin.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dynamicArray.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(system.o)
- .bss           0x02071f30        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(video.o)
- .bss           0x02071f30       0x18 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_comms.o)
- .bss           0x02071f48       0x1c /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_main9.o)
-                0x02071f48                mmcbMemory
-                0x02071f4c                mmModuleCount
-                0x02071f50                mmSampleCount
-                0x02071f54                mmModuleBank
-                0x02071f54                mmMemoryBank
-                0x02071f58                mmSampleBank
-                0x02071f5c                mmCallback
-                0x02071f60                mmActiveStatus
- .bss           0x02071f64        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_memory.o)
- .bss           0x02071f64       0x44 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_soundbank.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_flusher.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_udivsi3.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_divsi3.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_dvmd_tls.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_muldi3.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-bsearch.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fclose.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fflush.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-findfp.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fopen.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fread.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-freer.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fseek.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fwalk.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-impure.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-init.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-iprintf.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-makebuf.o)
- .bss           0x02071fa8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-malloc.o)
- .bss           0x02071fa8       0x34 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mallocr.o)
-                0x02071fa8                __malloc_top_pad
-                0x02071fac                __malloc_current_mallinfo
-                0x02071fd4                __malloc_max_sbrked_mem
-                0x02071fd8                __malloc_max_total_mem
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memcpy-stub.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memset.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mlock.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-realloc.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-reallocr.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-refill.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-setvbuf.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-siscanf.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-sprintf.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-stdio.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcat.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcpy.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strlen.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncpy.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiscanf.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfprintf.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ungetc.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-vfiprintf.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcrtomb.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcsrtombs.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wctomb_r.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wsetup.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ctype_.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-dtoa.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-flags.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fputwc.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fvwrite.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-iswspace.o)
- .bss           0x02071fdc        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-jp2uc.o)
- .bss           0x02071fdc      0x2b8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-locale.o)
-                0x02072288                _PathLocale
-                0x0207228c                __mlocale_changed
-                0x02072290                __nlocale_changed
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbrtowc.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbtowc_r.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memchr-stub.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memmove.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mprec.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-sccl.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-s_fpclassify.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcasecmp.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strchr.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcmp.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strlcpy.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncasecmp.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncmp.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoll_r.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtol.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoull_r.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoul.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiprintf.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wbuf.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcsnrtombs.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-callocr.o)
- .bss           0x02072294        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-getenv_r.o)
- .bss           0x02072294        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-environ.o)
- .bss           0x02072298        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-envlock.o)
- .bss           0x02072298        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(iosupport.o)
- .bss           0x02072298        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(close.o)
- .bss           0x02072298        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(fstat.o)
- .bss           0x02072298        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(isatty.o)
- .bss           0x02072298        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(lseek.o)
- .bss           0x02072298        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(open.o)
- .bss           0x02072298        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(read.o)
- .bss           0x02072298        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(sbrk.o)
- .bss           0x0207229c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(times.o)
- .bss           0x0207229c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(write.o)
- .bss           0x0207229c        0x8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(malloc_vars.o)
-                0x0207229c                fake_heap_start
-                0x020722a0                fake_heap_end
- .bss           0x020722a4        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(build_argv.o)
- .bss           0x020722a4        0x8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(syscall_support.o)
-                0x020722a4                __syscalls
- .bss           0x020722ac     0x1000 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(handle_manager.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_addsubdf3.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_muldivdf3.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_cmpdf2.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_fixdfsi.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_aeabi_uldivmod.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(bpabi.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_divdi3.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_udivdi3.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_clzsi2.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-errno.o)
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtend.o
- .bss           0x020732ac        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtn.o
+ .bss           0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/ds_arm9_crt0.o
+ .bss           0x020707a8        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crti.o
+ .bss           0x020707a8       0x1c /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtbegin.o
+ .bss           0x020707c4        0x0 soundbank_bin.o
+ .bss           0x020707c4        0x0 coin.o
+ .bss           0x020707c4        0x0 drunkenlogo.o
+ .bss           0x020707c4        0x0 piano_image.o
+ .bss           0x020707c4        0x0 woman.o
+ .bss           0x020707c4       0x80 croutine.o
+                0x02070830                pxCurrentCoRoutine
+ .bss           0x02070844        0x0 list.o
+ .bss           0x02070844        0x0 queue.o
+ .bss           0x02070844     0x14cc tasks.o
+                0x02070844                pxCurrentTCB
+ .bss           0x02071d10        0x8 card_spi.o
+ .bss           0x02071d18     0x1050 gdbStub.o
+                0x02072d18                regMem
+ .bss           0x02072d68        0x0 heap_3.o
+ .bss           0x02072d68        0x0 port.o
+ .bss           0x02072d68        0x0 portISR.o
+ .bss           0x02072d68       0x70 sevencore_io.o
+ .bss           0x02072dd8        0x0 ControlTask.o
+ .bss           0x02072dd8        0x0 main.o
+ .bss           0x02072dd8        0x0 gdbStubAsm.o
+ .bss           0x02072dd8        0x0 port_asm.o
+ .bss           0x02072dd8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(background.o)
+ .bss           0x02072dd8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
+ .bss           0x02072dd8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(decompress.o)
+ .bss           0x02072dd8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptions.o)
+ .bss           0x02072dd8        0x6 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(keys.o)
+ .bss           0x02072dde        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sassert.o)
+ .bss           0x02072dde        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite.o)
+ .bss           0x02072dde        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite_alloc.o)
+ .bss           0x02072dde        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(touch.o)
+ .bss           0x02072dde        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(trig.o)
+ *fill*         0x02072dde        0x2 00
+ .bss           0x02072de0        0x8 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
+ .bss           0x02072de8        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(initSystem.o)
+ .bss           0x02072de8        0x8 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(fifosystem.o)
+                0x02072dec                processing
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interrupts.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(libnds_exit.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(syscalls.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dcache.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptionHandler.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(mpu_setup.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(biosCalls.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(debugprint.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interruptDispatcher.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(swiSoftReset.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(default_font.bin.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dynamicArray.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(system.o)
+ .bss           0x02072df0        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(video.o)
+ .bss           0x02072df0       0x18 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_comms.o)
+ .bss           0x02072e08       0x1c /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_main9.o)
+                0x02072e08                mmcbMemory
+                0x02072e0c                mmModuleCount
+                0x02072e10                mmSampleCount
+                0x02072e14                mmModuleBank
+                0x02072e14                mmMemoryBank
+                0x02072e18                mmSampleBank
+                0x02072e1c                mmCallback
+                0x02072e20                mmActiveStatus
+ .bss           0x02072e24        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_memory.o)
+ .bss           0x02072e24       0x44 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_soundbank.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/libnds/lib/libmm9.a(mm_flusher.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_udivsi3.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_divsi3.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_dvmd_tls.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_muldi3.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-bsearch.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fclose.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fflush.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-findfp.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fopen.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fread.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-freer.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fseek.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fwalk.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-impure.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-init.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-iprintf.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-makebuf.o)
+ .bss           0x02072e68        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-malloc.o)
+ .bss           0x02072e68       0x34 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mallocr.o)
+                0x02072e68                __malloc_top_pad
+                0x02072e6c                __malloc_current_mallinfo
+                0x02072e94                __malloc_max_sbrked_mem
+                0x02072e98                __malloc_max_total_mem
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memcpy-stub.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memset.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mlock.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-realloc.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-reallocr.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-refill.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-setvbuf.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-siscanf.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-sprintf.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-stdio.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcat.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcpy.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strlen.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncpy.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiscanf.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfprintf.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ungetc.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-vfiprintf.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcrtomb.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcsrtombs.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wctomb_r.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wsetup.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-ctype_.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-dtoa.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-flags.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fputwc.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-fvwrite.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-iswspace.o)
+ .bss           0x02072e9c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-jp2uc.o)
+ .bss           0x02072e9c      0x2b8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-locale.o)
+                0x02073148                _PathLocale
+                0x0207314c                __mlocale_changed
+                0x02073150                __nlocale_changed
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbrtowc.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mbtowc_r.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memchr-stub.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-memmove.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-mprec.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-sccl.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-s_fpclassify.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcasecmp.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strchr.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strcmp.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strlcpy.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncasecmp.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strncmp.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoll_r.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtol.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoull_r.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-strtoul.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-svfiprintf.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wbuf.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-wcsnrtombs.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-callocr.o)
+ .bss           0x02073154        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-getenv_r.o)
+ .bss           0x02073154        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-environ.o)
+ .bss           0x02073158        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-envlock.o)
+ .bss           0x02073158        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(iosupport.o)
+ .bss           0x02073158        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(close.o)
+ .bss           0x02073158        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(fstat.o)
+ .bss           0x02073158        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(isatty.o)
+ .bss           0x02073158        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(lseek.o)
+ .bss           0x02073158        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(open.o)
+ .bss           0x02073158        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(read.o)
+ .bss           0x02073158        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(sbrk.o)
+ .bss           0x0207315c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(times.o)
+ .bss           0x0207315c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(write.o)
+ .bss           0x0207315c        0x8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(malloc_vars.o)
+                0x0207315c                fake_heap_start
+                0x02073160                fake_heap_end
+ .bss           0x02073164        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(build_argv.o)
+ .bss           0x02073164        0x8 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(syscall_support.o)
+                0x02073164                __syscalls
+ .bss           0x0207316c     0x1000 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(handle_manager.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_cmpdf2.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_arm_fixdfsi.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(bpabi.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_divdi3.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_udivdi3.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/libgcc.a(_clzsi2.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libg.a(lib_a-errno.o)
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtend.o
+ .bss           0x0207416c        0x0 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/thumb/crtn.o
  *(COMMON)
- COMMON         0x020732ac       0xd0 gdbStub.o
-                0x020732ac                altRegisters
-                0x02073314                registers
- COMMON         0x0207337c        0x4 sevencore_io.o
-                0x0207337c                KeyQueue
- COMMON         0x02073380      0x148 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(background.o)
-                0x02073380                bgState
-                0x020734c0                bgIsTextLut
- COMMON         0x020734c8       0x5c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
-                0x020734c8                currentCopy
- COMMON         0x02073524      0x800 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite.o)
-                0x02073524                OamMemorySub
-                0x02073924                OamMemory
- COMMON         0x02073d24       0x4c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
-                0x02073d24                glGlobalData
- COMMON         0x02073d70        0x1 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(initSystem.o)
-                0x02073d70                __dsimode
- *fill*         0x02073d71        0x3 00
- COMMON         0x02073d74      0xa40 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(fifosystem.o)
-                0x02073d74                fifo_datamsg_data
-                0x02073db4                fifo_buffer
-                0x020745b4                fifo_value32_func
-                0x020745f4                fifo_address_func
-                0x02074634                fifo_value32_data
-                0x02074674                fifo_value32_queue
-                0x020746b4                fifo_data_queue
-                0x020746f4                fifo_address_data
-                0x02074734                fifo_datamsg_func
-                0x02074774                fifo_address_queue
- COMMON         0x020747b4        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(times.o)
-                0x020747b4                punixTime
-                0x020747b8                . = ALIGN (0x4)
-                0x020747b8                __bss_end__ = ABSOLUTE (.)
-                0x020747b8                __end__ = ABSOLUTE (.)
+ COMMON         0x0207416c       0xd0 gdbStub.o
+                0x0207416c                altRegisters
+                0x020741d4                registers
+ COMMON         0x0207423c        0x4 sevencore_io.o
+                0x0207423c                KeyQueue
+ COMMON         0x02074240      0x148 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(background.o)
+                0x02074240                bgState
+                0x02074380                bgIsTextLut
+ COMMON         0x02074388       0x5c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
+                0x02074388                currentCopy
+ COMMON         0x020743e4      0x800 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite.o)
+                0x020743e4                OamMemorySub
+                0x020747e4                OamMemory
+ COMMON         0x02074be4       0x4c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
+                0x02074be4                glGlobalData
+ COMMON         0x02074c30        0x1 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(initSystem.o)
+                0x02074c30                __dsimode
+ *fill*         0x02074c31        0x3 00
+ COMMON         0x02074c34      0xa40 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(fifosystem.o)
+                0x02074c34                fifo_datamsg_data
+                0x02074c74                fifo_buffer
+                0x02075474                fifo_value32_func
+                0x020754b4                fifo_address_func
+                0x020754f4                fifo_value32_data
+                0x02075534                fifo_value32_queue
+                0x02075574                fifo_data_queue
+                0x020755b4                fifo_address_data
+                0x020755f4                fifo_datamsg_func
+                0x02075634                fifo_address_queue
+ COMMON         0x02075674        0x4 /home/yukult400/ndsdev/devkitPro/devkitARM/bin/../lib/gcc/arm-eabi/4.6.2/../../../../arm-eabi/lib/thumb/libsysbase.a(times.o)
+                0x02075674                punixTime
+                0x02075678                . = ALIGN (0x4)
+                0x02075678                __bss_end__ = ABSOLUTE (.)
+                0x02075678                __end__ = ABSOLUTE (.)
 
 .stab
  *(.stab)
