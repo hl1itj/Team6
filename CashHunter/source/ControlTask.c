@@ -230,7 +230,7 @@ void Control() {
 				videoSetMode(MODE_0_2D);
 				vramSetBankB(VRAM_B_MAIN_BG);
 				consoleInit(&topScreen, 3, BgType_Text4bpp, BgSize_T_256x256,
-						31, 0, true, true);
+						31, 0, false, true);
 				consoleSelect(&topScreen);
 				c = -1;
 			}
