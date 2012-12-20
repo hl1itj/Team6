@@ -122,14 +122,14 @@ void Control() {
 	/*
 	 decompress(piano_imageBitmap, BG_GFX_SUB,  LZ77Vram);
 	 */
-
+/*
 	PrintConsole topScreen;
 	videoSetMode(MODE_0_2D);
 	vramSetBankB(VRAM_B_MAIN_BG);
 	consoleInit(&topScreen, 3, BgType_Text4bpp, BgSize_T_256x256, 31, 0, true,
 			true);
 	consoleSelect(&topScreen);
-	iprintf("\n\n\tHello DS dev'rs\n");
+	iprintf("\n\n\tHello DS dev'rs\n");*/
 
 	//-----------------------------------------------------------------
 	// Initialize the graphics engines
