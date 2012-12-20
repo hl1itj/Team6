@@ -426,15 +426,14 @@ Linker script and memory map
                 0x020045b4                readb_virtual_io
                 0x02004608                writeb_virtual_io
                 0x020046bc                close_virtual_io
- .text          0x020046c0      0x938 ControlTask.o
+ .text          0x020046c0      0x93c ControlTask.o
                 0x02004b24                animateWoman
                 0x02004b40                initWoman
                 0x02004ba4                initCoin
                 0x02004c08                Control
- .text          0x02004ff8       0x54 main.o
-                0x02004ff8                main
-                0x0200503c                InitDebug
- *fill*         0x0200504c        0x4 ff
+ .text          0x02004ffc       0x54 main.o
+                0x02004ffc                main
+                0x02005040                InitDebug
  .text          0x02005050       0xf0 gdbStubAsm.o
                 0x02005050                BreakPoint
                 0x02005058                ICInvalidateAll
@@ -2289,7 +2288,7 @@ ARM.exidx
  .debug_abbrev  0x00003661      0x19a /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(system.o)
  .debug_abbrev  0x000037fb      0x1fa /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(video.o)
 
-.debug_line     0x00000000     0x61c4
+.debug_line     0x00000000     0x61c5
  *(.debug_line)
  .debug_line    0x00000000      0x218 croutine.o
  .debug_line    0x00000218      0x126 list.o
@@ -2301,36 +2300,36 @@ ARM.exidx
  .debug_line    0x000014aa      0x224 port.o
  .debug_line    0x000016ce       0x7d portISR.o
  .debug_line    0x0000174b      0x41c sevencore_io.o
- .debug_line    0x00001b67      0x45b ControlTask.o
- .debug_line    0x00001fc2      0x1a4 main.o
- .debug_line    0x00002166       0xab gdbStubAsm.o
- .debug_line    0x00002211       0xbb port_asm.o
- .debug_line    0x000022cc      0x2af /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(background.o)
- .debug_line    0x0000257b      0x71d /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
- .debug_line    0x00002c98      0x1c6 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(decompress.o)
- .debug_line    0x00002e5e      0x199 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptions.o)
- .debug_line    0x00002ff7      0x242 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(keys.o)
- .debug_line    0x00003239      0x19e /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sassert.o)
- .debug_line    0x000033d7      0x309 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite.o)
- .debug_line    0x000036e0      0x2a9 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite_alloc.o)
- .debug_line    0x00003989      0x21e /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(touch.o)
- .debug_line    0x00003ba7      0x23d /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(trig.o)
- .debug_line    0x00003de4      0x9a2 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
- .debug_line    0x00004786      0x355 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(initSystem.o)
- .debug_line    0x00004adb      0x719 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(fifosystem.o)
- .debug_line    0x000051f4      0x238 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interrupts.o)
- .debug_line    0x0000542c      0x1ca /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(libnds_exit.o)
- .debug_line    0x000055f6      0x141 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(syscalls.o)
- .debug_line    0x00005737       0xa2 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dcache.o)
- .debug_line    0x000057d9       0xa9 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptionHandler.o)
- .debug_line    0x00005882       0xe1 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(mpu_setup.o)
- .debug_line    0x00005963       0xc3 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(biosCalls.o)
- .debug_line    0x00005a26       0x9c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(debugprint.o)
- .debug_line    0x00005ac2       0xc2 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interruptDispatcher.o)
- .debug_line    0x00005b84       0x91 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(swiSoftReset.o)
- .debug_line    0x00005c15      0x117 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dynamicArray.o)
- .debug_line    0x00005d2c      0x25c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(system.o)
- .debug_line    0x00005f88      0x23c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(video.o)
+ .debug_line    0x00001b67      0x45c ControlTask.o
+ .debug_line    0x00001fc3      0x1a4 main.o
+ .debug_line    0x00002167       0xab gdbStubAsm.o
+ .debug_line    0x00002212       0xbb port_asm.o
+ .debug_line    0x000022cd      0x2af /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(background.o)
+ .debug_line    0x0000257c      0x71d /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(console.o)
+ .debug_line    0x00002c99      0x1c6 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(decompress.o)
+ .debug_line    0x00002e5f      0x199 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptions.o)
+ .debug_line    0x00002ff8      0x242 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(keys.o)
+ .debug_line    0x0000323a      0x19e /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sassert.o)
+ .debug_line    0x000033d8      0x309 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite.o)
+ .debug_line    0x000036e1      0x2a9 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(sprite_alloc.o)
+ .debug_line    0x0000398a      0x21e /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(touch.o)
+ .debug_line    0x00003ba8      0x23d /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(trig.o)
+ .debug_line    0x00003de5      0x9a2 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(videoGL.o)
+ .debug_line    0x00004787      0x355 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(initSystem.o)
+ .debug_line    0x00004adc      0x719 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(fifosystem.o)
+ .debug_line    0x000051f5      0x238 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interrupts.o)
+ .debug_line    0x0000542d      0x1ca /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(libnds_exit.o)
+ .debug_line    0x000055f7      0x141 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(syscalls.o)
+ .debug_line    0x00005738       0xa2 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dcache.o)
+ .debug_line    0x000057da       0xa9 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(exceptionHandler.o)
+ .debug_line    0x00005883       0xe1 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(mpu_setup.o)
+ .debug_line    0x00005964       0xc3 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(biosCalls.o)
+ .debug_line    0x00005a27       0x9c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(debugprint.o)
+ .debug_line    0x00005ac3       0xc2 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(interruptDispatcher.o)
+ .debug_line    0x00005b85       0x91 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(swiSoftReset.o)
+ .debug_line    0x00005c16      0x117 /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(dynamicArray.o)
+ .debug_line    0x00005d2d      0x25c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(system.o)
+ .debug_line    0x00005f89      0x23c /home/yukult400/ndsdev/devkitPro/libnds/lib/libnds9.a(video.o)
 
 .debug_frame    0x00000000     0x1fa8
  *(.debug_frame)
