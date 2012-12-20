@@ -33,6 +33,7 @@ typedef struct {
 	int state;
 	int anim_frame;
 	int cash;
+	int time;
 
 } Woman;
 typedef struct {
@@ -161,6 +162,8 @@ void Control() {
 	Woman woman = { 17, 20 };
 	Coin coin = { 0, 0 };
 	woman.cash = 0;
+	woman.time = 0;
+
 	int c = 0;
 	vramSetBankC(VRAM_C_SUB_BG);
 	bgInitSub(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
@@ -225,9 +228,36 @@ void Control() {
 			if ((woman.x >= 175) && (woman.y >= 20)) {
 				if ((woman.x <= 195) && (woman.y <= 40)) {
 					mmEffectEx(&boom);
-					woman.cash += 10;
+					woman.cash += 50; //185,30
 				}
 			}
+			if ((woman.x >= 175) && (woman.y >= 50)) {
+					if ((woman.x <= 195) && (woman.y <= 70)) {
+						mmEffectEx(&boom);
+						woman.cash += 50; //185,60
+					}
+				}
+			if ((woman.x >= 175) && (woman.y >= 20)) {
+					if ((woman.x <= 195) && (woman.y <= 40)) {
+						mmEffectEx(&boom);
+						woman.cash += 5; // 40,1182
+					}
+				}
+			if ((woman.x >= 175) && (woman.y >= 20)) {
+					if ((woman.x <= 195) && (woman.y <= 40)) {
+						mmEffectEx(&boom);
+						woman.cash += 5; //47,573
+					}
+				}
+
+			if ((woman.x >= 175) && (woman.y >= 20)) {
+					if ((woman.x <= 195) && (woman.y <= 40)) {
+						mmEffectEx(&boom);
+						woman.cash += 5; // 107,920 TimeReset
+					}
+				}
+
+
 			if (c == 1) {
 				PrintConsole topScreen;
 				videoSetMode(MODE_0_2D);
@@ -244,6 +274,7 @@ void Control() {
 			iprintf("\n\n\tGo Go !!\n\n");
 			iprintf("Location x = %d y = %d", woman.x, woman.y);
 			iprintf("\n\n\t Ok !! My Cash : %d\n\n",woman.cash);
+			iprintf("\n\n\t Oh My God !! My Time : %d\n\n",woman.time);
 
 		}
 
