@@ -293,9 +293,9 @@ void Control() {
 
 		coin.x = 185;
 		coin.y = 30;
-		/*oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32,
+		oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32,
 				SpriteColorFormat_256Color, coin.sprite_gfx_mem[coin.gfx_frame],
-				-1, false, false, false, false, false);*/
+				-1, false, false, false, false, false);
 
 		swiWaitForVBlank();
 
