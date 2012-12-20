@@ -1,0 +1,11 @@
+Downloading the required files
+• Latest devkitPro Updater • devkitARM r21
+• PAlib Installer
+Installing
+• Run the devkitPro Updater and install it in “C:\devkitPro”
+• Delete or rename the “devkitARM” folder in “C:\devkitPro”
+• Run the devkitARM r21 installer, install it in “C:\devkitPro”
+• Delete the “libnds” folder in “C:\devkitPro”
+• Run the Libnds Package and install it in, you guessed it, “C:\devkitPro”
+• Run the Palib Installer and again, install it in “C:\devkitPro”
+• Reboot
