@@ -157,7 +157,7 @@ void Control() {
 
 	mm_sfxhand amb = 0;
 
-	Woman woman = { 17, 12 };
+	Woman woman = { 17, 20 };
 	Coin coin = { 0, 0 };
 	int c = 0;
 	vramSetBankC(VRAM_C_SUB_BG);
@@ -223,7 +223,7 @@ void Control() {
 					mmEffectEx(&boom);
 				}
 			}
-			if (c == 0) {
+			if ((c == 0) && (keys & KEY_UP)) {
 				PrintConsole topScreen;
 				videoSetMode(MODE_0_2D);
 				vramSetBankB(VRAM_B_MAIN_BG);
