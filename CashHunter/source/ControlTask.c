@@ -123,6 +123,14 @@ void Control() {
 	 decompress(piano_imageBitmap, BG_GFX_SUB,  LZ77Vram);
 	 */
 
+	PrintConsole topScreen;
+	videoSetMode(MODE_0_2D);
+	vramSetBankB(VRAM_B_MAIN_BG);
+	consoleInit(&topScreen, 3, BgType_Text4bpp, BgSize_T_256x256, 31, 0, true,
+			true);
+	consoleSelect(&topScreen);
+	iprintf("\n\n\tHello DS dev'rs\n");
+
 	//-----------------------------------------------------------------
 	// Initialize the graphics engines
 	//-----------------------------------------------------------------
@@ -149,7 +157,7 @@ void Control() {
 
 	mm_sfxhand amb = 0;
 
-	Woman woman = { 0, 0 };
+	Woman woman = { 17, 12 };
 	Coin coin = { 0, 0 };
 	int c = 0;
 	vramSetBankC(VRAM_C_SUB_BG);
@@ -164,9 +172,6 @@ void Control() {
 
 	dmaCopy(womanPal, SPRITE_PALETTE_SUB, 512);
 	//dmaCopy(coinPal, SPRITE_PALETTE_SUB, 512);
-
-
-
 
 	do {
 
@@ -218,8 +223,17 @@ void Control() {
 					mmEffectEx(&boom);
 				}
 			}
-
-			iprintf("캐릭터 위치 x = %d y = %d",woman.x,woman.y);
+			if (c == 0) {
+				PrintConsole topScreen;
+				videoSetMode(MODE_0_2D);
+				vramSetBankB(VRAM_B_MAIN_BG);
+				consoleInit(&topScreen, 3, BgType_Text4bpp, BgSize_T_256x256,
+						31, 0, true, true);
+				consoleSelect(&topScreen);
+				c++;
+			}
+			iprintf("\n\n\tHello DS dev'rs\n");
+			iprintf("캐릭터 위치 x = %d y = %d", woman.x, woman.y);
 		}
 
 		animateWoman(&woman);
