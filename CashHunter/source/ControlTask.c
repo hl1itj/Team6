@@ -98,7 +98,7 @@ void initCoin(Coin *sprite, u8* gfx) {
 
 void Control() {
 
-	consoleDemoInit();
+//	consoleDemoInit();
 
 	//display background
 	videoSetMode(MODE_5_2D);
@@ -110,7 +110,7 @@ void Control() {
 	dmaCopy(drunkenlogoBitmap, bgGetGfxPtr(bg3), 256 * 256);
 	dmaCopy(drunkenlogoPal, BG_PALETTE, 256 * 2);
 
-	consoleDemoInit();
+	//consoleDemoInit();
 
 	//set up the sub display
 	videoSetModeSub(MODE_5_2D);
@@ -165,6 +165,9 @@ void Control() {
 	dmaCopy(womanPal, SPRITE_PALETTE_SUB, 512);
 	//dmaCopy(coinPal, SPRITE_PALETTE_SUB, 512);
 
+
+
+
 	do {
 
 		int keys_pressed, keys_released;
@@ -216,6 +219,7 @@ void Control() {
 				}
 			}
 
+			iprintf("캐릭터 위치 x = %d y = %d",woman.x,woman.y);
 		}
 
 		animateWoman(&woman);
