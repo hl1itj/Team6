@@ -237,26 +237,31 @@ void Control() {
 						woman.cash += 50; //185,60
 					}
 				}
-			if ((woman.x >= 30) && (woman.y >= 1172)) {
-					if ((woman.x <= 50) && (woman.y <= 1192)) {
+			if ((woman.x >= 30) && (woman.y >= 115)) {
+					if ((woman.x <= 50) && (woman.y <= 135)) {
 						mmEffectEx(&boom);
-						woman.cash += 5; // 40,1182
+						woman.cash += 5; // 40,125
 					}
 				}
-			if ((woman.x >= 37) && (woman.y >= 563)) {
-					if ((woman.x <= 57) && (woman.y <= 583)) {
+			if ((woman.x >= 37) && (woman.y >= 45)) {
+					if ((woman.x <= 57) && (woman.y <= 65)) {
 						mmEffectEx(&boom);
-						woman.cash += 5; //47,573
-					}
-				}
-
-			if ((woman.x >= 175) && (woman.y >= 910)) {
-					if ((woman.x <= 195) && (woman.y <= 930)) {
-						mmEffectEx(&boom);
-						woman.cash += 5; // 107,920 TimeReset
+						woman.cash += 5; //47,55
 					}
 				}
 
+			if ((woman.x >= 100) && (woman.y >= 80)) {
+					if ((woman.x <= 120) && (woman.y <= 100)) {
+						mmEffectEx(&boom);
+						woman.cash += 5; // 110,90 TimeReset
+					}
+				}
+			if ((woman.x >= 5) && (woman.y >= 85)) {
+						if ((woman.x <= 15) && (woman.y <= 95)) {
+							mmEffectEx(&ambulance);
+							//woman.cash += 5; // 10,90 END
+						}
+					}
 
 			if (c == 1) {
 				PrintConsole topScreen;
@@ -291,11 +296,11 @@ void Control() {
 				woman.sprite_gfx_mem[woman.gfx_frame], -1, false, false, false,
 				false, false);
 
-		coin.x = 185;
-		coin.y = 30;
-		oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32,
+		coin.x = 10;
+		coin.y = 90;
+		/*oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32,
 				SpriteColorFormat_256Color, coin.sprite_gfx_mem[coin.gfx_frame],
-				-1, false, false, false, false, false);
+				-1, false, false, false, false, false);*/
 
 		swiWaitForVBlank();
 
