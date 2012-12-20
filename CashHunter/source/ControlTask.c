@@ -34,8 +34,7 @@ typedef struct {
 	int anim_frame;
 
 } Woman;
-typedef struct
-{
+typedef struct {
 	int x;
 	int y;
 
@@ -45,8 +44,7 @@ typedef struct
 	int state;
 	int anim_frame;
 
-
-}Coin;
+} Coin;
 //---------------------------------------------------------------------
 // The state of the sprite (which way it is walking)
 //---------------------------------------------------------------------
@@ -85,18 +83,16 @@ void initWoman(Woman *sprite, u8* gfx) {
 	}
 }
 
-void initCoin(Coin *sprite, u8* gfx)
-{
+void initCoin(Coin *sprite, u8* gfx) {
 	int i;
 
-	for(i = 0; i < 12; i++)
-	{
-		sprite->sprite_gfx_mem[i] = oamAllocateGfx(&oamSub, SpriteSize_16x16, SpriteColorFormat_256Color);
-		dmaCopy(gfx, sprite->sprite_gfx_mem[i], 16*16);
-		gfx += 16*16;
+	for (i = 0; i < 12; i++) {
+		sprite->sprite_gfx_mem[i] = oamAllocateGfx(&oamSub, SpriteSize_16x16,
+				SpriteColorFormat_256Color);
+		dmaCopy(gfx, sprite->sprite_gfx_mem[i], 16 * 16);
+		gfx += 16 * 16;
 	}
 }
-
 
 //-*-
 
@@ -114,16 +110,16 @@ void Control() {
 	dmaCopy(drunkenlogoBitmap, bgGetGfxPtr(bg3), 256 * 256);
 	dmaCopy(drunkenlogoPal, BG_PALETTE, 256 * 2);
 
-	 consoleDemoInit();
+	consoleDemoInit();
 
-	 //set up the sub display
-	 videoSetModeSub(MODE_5_2D);
-	 vramSetBankC(VRAM_C_SUB_BG);
-	 //bgInitSub(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
-	 //decompress(piano_imageBitmap, BG_GFX_SUB, LZ77Vram);
+	//set up the sub display
+	videoSetModeSub(MODE_5_2D);
+	vramSetBankC(VRAM_C_SUB_BG);
+	//bgInitSub(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
+	//decompress(piano_imageBitmap, BG_GFX_SUB, LZ77Vram);
 
-	 bgInitSub(3, BgType_Bmp8 , BgSize_R_128x128, 0,0);
-	 /*
+	bgInitSub(3, BgType_Bmp8, BgSize_R_128x128, 0, 0);
+	/*
 	 decompress(piano_imageBitmap, BG_GFX_SUB,  LZ77Vram);
 	 */
 
@@ -230,12 +226,20 @@ void Control() {
 
 		coin.x = 185;
 		coin.y = 30;
-		oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32, SpriteColorFormat_256Color,
-			coin.sprite_gfx_mem[coin.gfx_frame], -1, false, false, false, false, false);
+		oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32,
+				SpriteColorFormat_256Color, coin.sprite_gfx_mem[coin.gfx_frame],
+				-1, false, false, false, false, false);
 
 		swiWaitForVBlank();
 
-		if()
+		if (c == 0) {
+			if ((woman.x > 175) || (woman.x < 195)) {
+				if ((woman.y > 20) || (woman.y < 40)) {
+					c++; //한번만 울리게
+					mmEffectEx(&boom);
+				}
+			}
+		}
 
 		oamUpdate(&oamMain);
 		oamUpdate(&oamSub);
