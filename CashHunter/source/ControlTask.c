@@ -91,9 +91,9 @@ void initCoin(Coin *sprite, u8* gfx)
 
 	for(i = 0; i < 12; i++)
 	{
-		sprite->sprite_gfx_mem[i] = oamAllocateGfx(&oamSub, SpriteSize_32x32, SpriteColorFormat_256Color);
-		dmaCopy(gfx, sprite->sprite_gfx_mem[i], 32*32);
-		gfx += 32*32;
+		sprite->sprite_gfx_mem[i] = oamAllocateGfx(&oamSub, SpriteSize_16x16, SpriteColorFormat_256Color);
+		dmaCopy(gfx, sprite->sprite_gfx_mem[i], 16*16);
+		gfx += 16*16;
 	}
 }
 
@@ -153,9 +153,9 @@ void Control() {
 
 	mm_sfxhand amb = 0;
 
-	Woman woman = { 10, 10 };
+	Woman woman = { 0, 0 };
 	Coin coin = { 0, 0 };
-
+	int c = 0;
 	vramSetBankC(VRAM_C_SUB_BG);
 	bgInitSub(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
 	decompress(piano_imageBitmap, BG_GFX_SUB, LZ77Vram);
@@ -167,15 +167,16 @@ void Control() {
 	initCoin(&coin, (u8*) coinTiles);
 
 	dmaCopy(womanPal, SPRITE_PALETTE_SUB, 512);
-	dmaCopy(coinPal, SPRITE_PALETTE_SUB, 512);
+	//dmaCopy(coinPal, SPRITE_PALETTE_SUB, 512);
+
 	do {
 
 		int keys_pressed, keys_released;
 
 		swiWaitForVBlank();
 		scanKeys();
-		keys_pressed = keysDown();
-		keys_released = keysUp();
+		//keys_pressed = keysDown();
+		//keys_released = keysUp();
 
 		int keys = keysHeld();
 
@@ -227,28 +228,21 @@ void Control() {
 				woman.sprite_gfx_mem[woman.gfx_frame], -1, false, false, false,
 				false, false);
 
-		oamSet(&oamSub, 0, coin.x, coin.y, 0, 0, SpriteSize_32x32, SpriteColorFormat_256Color,
+		coin.x = 185;
+		coin.y = 30;
+		oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32, SpriteColorFormat_256Color,
 			coin.sprite_gfx_mem[coin.gfx_frame], -1, false, false, false, false, false);
 
 		swiWaitForVBlank();
 
+		if()
+
 		oamUpdate(&oamMain);
 		oamUpdate(&oamSub);
 
-		if (keys_pressed & KEY_A) {
-			amb = mmEffectEx(&ambulance);
-		}
-		// stop ambulance sound when move button is released
-		if ((keys_released & KEY_A)) {
-			mmEffectCancel(amb);
-		}
-
-		//Play explosion sound effect out of right speaker if B button is pressed
-		if (keys_pressed & KEY_B) {
+		if (keys & KEY_A) {
 			mmEffectEx(&boom);
 		}
-		if (keys_pressed & KEY_START)
-			break;
 
 	} while (1);
 
