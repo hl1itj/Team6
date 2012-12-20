@@ -225,7 +225,7 @@ void Control() {
 			if ((woman.x >= 175) && (woman.y >= 20)) {
 				if ((woman.x <= 195) && (woman.y <= 40)) {
 					mmEffectEx(&boom);
-					wonman.cash += 10;
+					woman.cash += 10;
 				}
 			}
 			if (c == 1) {
@@ -243,7 +243,7 @@ void Control() {
 			iprintf("\x1b[10;0H\n\n\tCash Hunter !!\n\n");
 			iprintf("\n\n\tGo Go !!\n\n");
 			iprintf("Location x = %d y = %d", woman.x, woman.y);
-			iprintf("\n\n\t Ok !! My Cash : %d\n\n",wonman.cash);
+			iprintf("\n\n\t Ok !! My Cash : %d\n\n",woman.cash);
 
 		}
 
