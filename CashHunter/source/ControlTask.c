@@ -219,8 +219,11 @@ void Control() {
 					woman.x++;
 				woman.state = W_RIGHT;
 				break;
+			case KEY_A:
+				mmEffectCancel(amb);
+				amb_check = 0;
+				break;
 			}
-			keys_pressed = 0;
 
 			woman.anim_frame++;
 			if (woman.anim_frame >= FRAMES_PER_ANIMATION)
@@ -257,15 +260,13 @@ void Control() {
 					woman.cash += 5; // 110,90 TimeReset
 				}
 			}
-			if ((woman.x >= 5) && (woman.y >= 85)) {
+			if ((amb_check != 1) && (woman.x >= 5) && (woman.y >= 85)) {
 				if ((woman.x <= 15) && (woman.y <= 95)) {
 					amb = mmEffectEx(&ambulance);
 					//woman.cash += 5; // 10,90 END
-					//amb_check = 1;
+					amb_check = 1;
 				}
 			}
-
-
 
 			if (c == 1) {
 				PrintConsole topScreen;
@@ -309,10 +310,11 @@ void Control() {
 
 		oamUpdate(&oamMain);
 		oamUpdate(&oamSub);
-
+/*
 		if (keys & KEY_A) {
 			mmEffectCancel(amb);
-		}
+			amb_check = 0;
+		}*/
 
 	} while (1);
 
