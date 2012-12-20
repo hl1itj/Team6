@@ -75,6 +75,7 @@ ControlTask.o: \
  /home/yukult400/ndsdev/Team6/CashHunter/build/drunkenlogo.h \
  /home/yukult400/ndsdev/Team6/CashHunter/build/piano_image.h \
  /home/yukult400/ndsdev/Team6/CashHunter/build/woman.h \
+ /home/yukult400/ndsdev/Team6/CashHunter/build/coin.h \
  /home/yukult400/ndsdev/Team6/CashHunter/FreeRTOS/NDS/card_spi.h \
  /home/yukult400/ndsdev/Team6/CashHunter/FreeRTOS/NDS/gdbStub.h \
  /home/yukult400/ndsdev/Team6/CashHunter/FreeRTOS/NDS/gdbStubAsm.h
@@ -228,6 +229,8 @@ ControlTask.o: \
 /home/yukult400/ndsdev/Team6/CashHunter/build/piano_image.h:
 
 /home/yukult400/ndsdev/Team6/CashHunter/build/woman.h:
+
+/home/yukult400/ndsdev/Team6/CashHunter/build/coin.h:
 
 /home/yukult400/ndsdev/Team6/CashHunter/FreeRTOS/NDS/card_spi.h:
 

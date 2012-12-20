@@ -1,0 +1,1 @@
+coin.o: coin.s

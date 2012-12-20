@@ -28,6 +28,7 @@
 #include "drunkenlogo.h"
 #include "piano_image.h"
 #include "woman.h"
+#include "coin.h"
 
 #include "card_spi.h"		// Debugging Headers
 #include "gdbStub.h"

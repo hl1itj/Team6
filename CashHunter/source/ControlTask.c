@@ -34,7 +34,19 @@ typedef struct {
 	int anim_frame;
 
 } Woman;
+typedef struct
+{
+	int x;
+	int y;
 
+	u16* sprite_gfx_mem[12];
+	int gfx_frame;
+
+	int state;
+	int anim_frame;
+
+
+}Coin;
 //---------------------------------------------------------------------
 // The state of the sprite (which way it is walking)
 //---------------------------------------------------------------------
@@ -72,6 +84,19 @@ void initWoman(Woman *sprite, u8* gfx) {
 		gfx += 32 * 32;
 	}
 }
+
+void initCoin(Coin *sprite, u8* gfx)
+{
+	int i;
+
+	for(i = 0; i < 12; i++)
+	{
+		sprite->sprite_gfx_mem[i] = oamAllocateGfx(&oamSub, SpriteSize_32x32, SpriteColorFormat_256Color);
+		dmaCopy(gfx, sprite->sprite_gfx_mem[i], 32*32);
+		gfx += 32*32;
+	}
+}
+
 
 //-*-
 
@@ -128,7 +153,8 @@ void Control() {
 
 	mm_sfxhand amb = 0;
 
-	Woman woman = { 0, 0 };
+	Woman woman = { 10, 10 };
+	Coin coin = { 0, 0 };
 
 	vramSetBankC(VRAM_C_SUB_BG);
 	bgInitSub(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
@@ -138,9 +164,10 @@ void Control() {
 	// Initialize the two sprites
 	//-----------------------------------------------------------------
 	initWoman(&woman, (u8*) womanTiles);
+	initCoin(&coin, (u8*) coinTiles);
 
 	dmaCopy(womanPal, SPRITE_PALETTE_SUB, 512);
-
+	dmaCopy(coinPal, SPRITE_PALETTE_SUB, 512);
 	do {
 
 		int keys_pressed, keys_released;
@@ -199,6 +226,9 @@ void Control() {
 				SpriteColorFormat_256Color,
 				woman.sprite_gfx_mem[woman.gfx_frame], -1, false, false, false,
 				false, false);
+
+		oamSet(&oamSub, 0, coin.x, coin.y, 0, 0, SpriteSize_32x32, SpriteColorFormat_256Color,
+			coin.sprite_gfx_mem[coin.gfx_frame], -1, false, false, false, false, false);
 
 		swiWaitForVBlank();
 
