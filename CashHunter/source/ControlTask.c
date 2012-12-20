@@ -266,7 +266,6 @@ void Control() {
 			}
 
 
-			mmEffectCancel(amb);
 
 			if (c == 1) {
 				PrintConsole topScreen;
