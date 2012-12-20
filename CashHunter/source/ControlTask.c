@@ -124,14 +124,14 @@ void Control() {
 	/*
 	 decompress(piano_imageBitmap, BG_GFX_SUB,  LZ77Vram);
 	 */
-/*
-	PrintConsole topScreen;
-	videoSetMode(MODE_0_2D);
-	vramSetBankB(VRAM_B_MAIN_BG);
-	consoleInit(&topScreen, 3, BgType_Text4bpp, BgSize_T_256x256, 31, 0, true,
-			true);
-	consoleSelect(&topScreen);
-	iprintf("\n\n\tHello DS dev'rs\n");*/
+	/*
+	 PrintConsole topScreen;
+	 videoSetMode(MODE_0_2D);
+	 vramSetBankB(VRAM_B_MAIN_BG);
+	 consoleInit(&topScreen, 3, BgType_Text4bpp, BgSize_T_256x256, 31, 0, true,
+	 true);
+	 consoleSelect(&topScreen);
+	 iprintf("\n\n\tHello DS dev'rs\n");*/
 
 	//-----------------------------------------------------------------
 	// Initialize the graphics engines
@@ -165,6 +165,7 @@ void Control() {
 	woman.time = 0;
 
 	int c = 0;
+	int amb_check = 0;
 	vramSetBankC(VRAM_C_SUB_BG);
 	bgInitSub(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
 	decompress(piano_imageBitmap, BG_GFX_SUB, LZ77Vram);
@@ -200,8 +201,8 @@ void Control() {
 				if (woman.y >= SCREEN_TOP)
 					woman.y--;
 				woman.state = W_UP;
-				if(c == 0)
-					c= 1;
+				if (c == 0)
+					c = 1;
 				break;
 			case KEY_DOWN:
 				if (woman.y <= SCREEN_BOTTOM)
@@ -232,36 +233,45 @@ void Control() {
 				}
 			}
 			if ((woman.x >= 175) && (woman.y >= 50)) {
-					if ((woman.x <= 195) && (woman.y <= 70)) {
-						mmEffectEx(&boom);
-						woman.cash += 50; //185,60
-					}
+				if ((woman.x <= 195) && (woman.y <= 70)) {
+					mmEffectEx(&boom);
+					woman.cash += 50; //185,60
 				}
+			}
 			if ((woman.x >= 30) && (woman.y >= 115)) {
-					if ((woman.x <= 50) && (woman.y <= 135)) {
-						mmEffectEx(&boom);
-						woman.cash += 5; // 40,125
-					}
+				if ((woman.x <= 50) && (woman.y <= 135)) {
+					mmEffectEx(&boom);
+					woman.cash += 5; // 40,125
 				}
+			}
 			if ((woman.x >= 37) && (woman.y >= 45)) {
-					if ((woman.x <= 57) && (woman.y <= 65)) {
-						mmEffectEx(&boom);
-						woman.cash += 5; //47,55
-					}
+				if ((woman.x <= 57) && (woman.y <= 65)) {
+					mmEffectEx(&boom);
+					woman.cash += 5; //47,55
 				}
+			}
 
 			if ((woman.x >= 100) && (woman.y >= 80)) {
-					if ((woman.x <= 120) && (woman.y <= 100)) {
-						mmEffectEx(&boom);
-						woman.cash += 5; // 110,90 TimeReset
-					}
+				if ((woman.x <= 120) && (woman.y <= 100)) {
+					mmEffectEx(&boom);
+					woman.cash += 5; // 110,90 TimeReset
 				}
+			}
 			if ((woman.x >= 5) && (woman.y >= 85)) {
-						if ((woman.x <= 15) && (woman.y <= 95)) {
-							mmEffectEx(&ambulance);
-							//woman.cash += 5; // 10,90 END
-						}
-					}
+				if ((woman.x <= 15) && (woman.y <= 95)) {
+					amb = mmEffectEx(&ambulance);
+					//woman.cash += 5; // 10,90 END
+					amb_check = 1;
+				}
+			}else if(amb_check == 1){
+						mmEffectCancel(amb);
+						//woman.cash += 5; // 10,90 END
+						amb_check = 0;
+			}
+
+
+
+			mmEffectCancel(amb);
 
 			if (c == 1) {
 				PrintConsole topScreen;
@@ -278,8 +288,7 @@ void Control() {
 			iprintf("\x1b[10;0H\n\n\tCash Hunter !!\n\n");
 			iprintf("\n\n\tGo Go !!\n\n");
 			iprintf("Location x = %d y = %d", woman.x, woman.y);
-			iprintf("\n\n\t Ok !! My Cash : %d"
-					,woman.cash);
+			iprintf("\n\n\t Ok !! My Cash : %d", woman.cash);
 
 		}
 
@@ -299,8 +308,8 @@ void Control() {
 		coin.x = 10;
 		coin.y = 90;
 		/*oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32,
-				SpriteColorFormat_256Color, coin.sprite_gfx_mem[coin.gfx_frame],
-				-1, false, false, false, false, false);*/
+		 SpriteColorFormat_256Color, coin.sprite_gfx_mem[coin.gfx_frame],
+		 -1, false, false, false, false, false);*/
 
 		swiWaitForVBlank();
 
