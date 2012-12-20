@@ -210,9 +210,10 @@ void Control() {
 			if (woman.anim_frame >= FRAMES_PER_ANIMATION)
 				woman.anim_frame = 0;
 
-			if ((woman.x == 185) && (woman.y < 30)) {
-
+			if ((woman.x >= 175) && (woman.y >= 20)) {
+				if ((woman.x <= 195) && (woman.y <= 40)) {
 					mmEffectEx(&boom);
+				}
 			}
 
 		}
