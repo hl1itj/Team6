@@ -32,6 +32,7 @@ typedef struct {
 
 	int state;
 	int anim_frame;
+	int cash;
 
 } Woman;
 typedef struct {
@@ -159,6 +160,7 @@ void Control() {
 
 	Woman woman = { 17, 20 };
 	Coin coin = { 0, 0 };
+	woman.cash = 0;
 	int c = 0;
 	vramSetBankC(VRAM_C_SUB_BG);
 	bgInitSub(3, BgType_Bmp16, BgSize_B16_256x256, 0, 0);
@@ -223,6 +225,7 @@ void Control() {
 			if ((woman.x >= 175) && (woman.y >= 20)) {
 				if ((woman.x <= 195) && (woman.y <= 40)) {
 					mmEffectEx(&boom);
+					wonman.cash += 10;
 				}
 			}
 			if (c == 1) {
@@ -238,8 +241,10 @@ void Control() {
 			//iprintf("\x1b[10;0HTouch x = %04i, %04i\n", touch.rawx, touch.px);
 			//iprintf("Touch y = %04i, %04i\n", touch.rawy, touch.py);
 			iprintf("\x1b[10;0H\n\n\tCash Hunter !!\n\n");
-			iprintf("Go Go !!\n\n");
+			iprintf("\n\n\tGo Go !!\n\n");
 			iprintf("Location x = %d y = %d", woman.x, woman.y);
+			iprintf("\n\n\t Ok !! My Cash : %d\n\n",wonman.cash);
+
 		}
 
 		animateWoman(&woman);
