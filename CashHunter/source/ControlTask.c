@@ -209,6 +209,15 @@ void Control() {
 			woman.anim_frame++;
 			if (woman.anim_frame >= FRAMES_PER_ANIMATION)
 				woman.anim_frame = 0;
+
+			if (c == 0) {
+					if ((woman.x > 175) || (woman.x < 195)) {
+						if ((woman.y > 20) || (woman.y < 40)) {
+							c++; //한번만 울리게
+							mmEffectEx(&boom);
+						}
+					}
+				}
 		}
 
 		animateWoman(&woman);
@@ -232,14 +241,6 @@ void Control() {
 
 		swiWaitForVBlank();
 
-		if (c == 0) {
-			if ((woman.x > 175) || (woman.x < 195)) {
-				if ((woman.y > 20) || (woman.y < 40)) {
-					c++; //한번만 울리게
-					mmEffectEx(&boom);
-				}
-			}
-		}
 
 		oamUpdate(&oamMain);
 		oamUpdate(&oamSub);
