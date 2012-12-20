@@ -280,10 +280,15 @@ void Control() {
 			//touchRead(&touch);
 			//iprintf("\x1b[10;0HTouch x = %04i, %04i\n", touch.rawx, touch.px);
 			//iprintf("Touch y = %04i, %04i\n", touch.rawy, touch.py);
-			iprintf("\x1b[10;0H\n\n\tCash Hunter !!\n\n");
-			iprintf("\n\n\tGo Go !!\n\n");
-			iprintf("Location x = %d y = %d", woman.x, woman.y);
-			iprintf("\n\n\t Ok !! My Cash : %d", woman.cash);
+			if (amb_check != 1) {
+				iprintf("\x1b[10;0H\n\n\tCash Hunter !!\n\n");
+				iprintf("\n\n\tGo Go !!\n\n");
+				iprintf("Location x = %d y = %d", woman.x, woman.y);
+				iprintf("\n\n\t Ok !! My Cash : %d", woman.cash);
+			}else{
+				iprintf("\x1b[10;0H\n\n\tCash Hunter !!\n\n");
+				iprintf("\n\n\tFinish !!\n\n");
+			}
 
 		}
 
@@ -310,11 +315,11 @@ void Control() {
 
 		oamUpdate(&oamMain);
 		oamUpdate(&oamSub);
-/*
-		if (keys & KEY_A) {
-			mmEffectCancel(amb);
-			amb_check = 0;
-		}*/
+		/*
+		 if (keys & KEY_A) {
+		 mmEffectCancel(amb);
+		 amb_check = 0;
+		 }*/
 
 	} while (1);
 
