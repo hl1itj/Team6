@@ -225,7 +225,7 @@ void Control() {
 					mmEffectEx(&boom);
 				}
 			}
-			if ((c == 1) && (woman.y != 20)) {
+			if (c == 1) {
 				PrintConsole topScreen;
 				videoSetMode(MODE_0_2D);
 				vramSetBankB(VRAM_B_MAIN_BG);
