@@ -237,21 +237,21 @@ void Control() {
 						woman.cash += 50; //185,60
 					}
 				}
-			if ((woman.x >= 175) && (woman.y >= 20)) {
-					if ((woman.x <= 195) && (woman.y <= 40)) {
+			if ((woman.x >= 30) && (woman.y >= 1172)) {
+					if ((woman.x <= 50) && (woman.y <= 1192)) {
 						mmEffectEx(&boom);
 						woman.cash += 5; // 40,1182
 					}
 				}
-			if ((woman.x >= 175) && (woman.y >= 20)) {
-					if ((woman.x <= 195) && (woman.y <= 40)) {
+			if ((woman.x >= 37) && (woman.y >= 563)) {
+					if ((woman.x <= 57) && (woman.y <= 583)) {
 						mmEffectEx(&boom);
 						woman.cash += 5; //47,573
 					}
 				}
 
-			if ((woman.x >= 175) && (woman.y >= 20)) {
-					if ((woman.x <= 195) && (woman.y <= 40)) {
+			if ((woman.x >= 175) && (woman.y >= 910)) {
+					if ((woman.x <= 195) && (woman.y <= 930)) {
 						mmEffectEx(&boom);
 						woman.cash += 5; // 107,920 TimeReset
 					}
@@ -273,8 +273,8 @@ void Control() {
 			iprintf("\x1b[10;0H\n\n\tCash Hunter !!\n\n");
 			iprintf("\n\n\tGo Go !!\n\n");
 			iprintf("Location x = %d y = %d", woman.x, woman.y);
-			iprintf("\n\n\t Ok !! My Cash : %d\n\n",woman.cash);
-			iprintf("\n\n\t Oh My God !! My Time : %d\n\n",woman.time);
+			iprintf("\n\n\t Ok !! My Cash : %d"
+					,woman.cash);
 
 		}
 
@@ -293,9 +293,9 @@ void Control() {
 
 		coin.x = 185;
 		coin.y = 30;
-		oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32,
+		/*oamSet(&oamSub, 1, coin.x, coin.y, 0, 0, SpriteSize_32x32,
 				SpriteColorFormat_256Color, coin.sprite_gfx_mem[coin.gfx_frame],
-				-1, false, false, false, false, false);
+				-1, false, false, false, false, false);*/
 
 		swiWaitForVBlank();
 
