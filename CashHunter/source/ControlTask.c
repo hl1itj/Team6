@@ -172,7 +172,7 @@ void Control() {
 
 	dmaCopy(womanPal, SPRITE_PALETTE_SUB, 512);
 	//dmaCopy(coinPal, SPRITE_PALETTE_SUB, 512);
-
+	//touchPosition touch;
 	do {
 
 		int keys_pressed, keys_released;
@@ -234,7 +234,11 @@ void Control() {
 				consoleSelect(&topScreen);
 				c = -1;
 			}
-			iprintf("\n\n\tHello DS dev'rs\n");
+			//touchRead(&touch);
+			//iprintf("\x1b[10;0HTouch x = %04i, %04i\n", touch.rawx, touch.px);
+			//iprintf("Touch y = %04i, %04i\n", touch.rawy, touch.py);
+			iprintf("\x1b[10;0H\n\n\tCash Hunter !!\n\n");
+			iprintf("Go Go !!\n\n");
 			iprintf("Location x = %d y = %d", woman.x, woman.y);
 		}
 
