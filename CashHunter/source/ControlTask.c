@@ -261,14 +261,9 @@ void Control() {
 				if ((woman.x <= 15) && (woman.y <= 95)) {
 					amb = mmEffectEx(&ambulance);
 					//woman.cash += 5; // 10,90 END
-					amb_check = 1;
+					//amb_check = 1;
 				}
-			}else if(amb_check == 1){
-						mmEffectCancel(amb);
-						//woman.cash += 5; // 10,90 END
-						amb_check = 0;
 			}
-
 
 
 			mmEffectCancel(amb);
@@ -317,7 +312,7 @@ void Control() {
 		oamUpdate(&oamSub);
 
 		if (keys & KEY_A) {
-			mmEffectEx(&boom);
+			mmEffectCancel(amb);
 		}
 
 	} while (1);
